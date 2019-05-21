@@ -19,10 +19,11 @@ C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\bin\Debu
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\bin\Debug\MetroFramework.dll
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.csprojAssemblyReference.cache
-C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.frm_Menu.resources
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.Properties.Resources.resources
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.csproj.GenerateResource.cache
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.csproj.CoreCompileInputs.cache
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.csproj.CopyComplete
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.exe
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.pdb
+C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.Forms.frmDebit.resources
+C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.frmMenu.resources
