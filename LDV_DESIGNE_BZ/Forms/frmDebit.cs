@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
+using LDV_DESIGNE_BZ.Class;
 
 namespace LDV_DESIGNE_BZ.Forms
 {
@@ -8,6 +11,17 @@ namespace LDV_DESIGNE_BZ.Forms
         {
             InitializeComponent();
         }
+
+        BankDAO bkDao = new BankDAO();
+        Bank b = new Bank();
+
+        #region Load()
+        private void frmDebit_Load(object sender, EventArgs e)
+        {
+            this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
+            txtNumAccount.SelectedIndex = -1;
+        }
+        #endregion
 
         #region Limpar();
         private void Limpar(Control controles)
@@ -38,8 +52,82 @@ namespace LDV_DESIGNE_BZ.Forms
                 }
             }
         }
+
         #endregion
 
+        #region KeyPress txtValue
+        private void txtValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') &&
+             (e.KeyChar != ',' && e.KeyChar != '.' &&
+              e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+            {
+                e.KeyChar = (Char)0;
+            }
+            else
+            {
+                if (e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if (!txtValue.Text.Contains(','))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.KeyChar = (Char)0;
+                    }
+                }
+            }
+        }
 
+        #endregion
+
+        #region Enter txtValue
+        private void txtValue_Enter(object sender, EventArgs e)
+        {
+            String x = "";
+            for (int i = 0; i <= txtValue.Text.Length - 1; i++)
+            {
+                if ((txtValue.Text[i] >= '0' &&
+                    txtValue.Text[i] <= '9') ||
+                    txtValue.Text[i] == ',')
+                {
+                    x += txtValue.Text[i];
+                }
+            }
+            txtValue.Text = x;
+            txtValue.SelectAll();
+        }
+
+        #endregion
+
+        #region Realizando um débito na conta
+        private void btnDebit_Click(object sender, EventArgs e)
+        {
+            if (txtDesc.Text == string.Empty || txtValue.Text == string.Empty || txtData.Text == string.Empty)
+            {
+                DialogResult resultado3 = MessageBox.Show("Preencha todos os campos ! ", "Erro !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (resultado3 == DialogResult.OK)
+                {
+                    Limpar(this);
+                }
+            }
+            else
+            {
+                //Transformando o valor positivo em negativo
+                txtSetValue.Text = lblNegative.Text + txtValue.Text;
+
+                //Atribuindo as informações para a o banco
+                Bank b = new Bank(Convert.ToDecimal(txtSetValue.Text), Convert.ToDateTime(txtData.Text), txtDesc.Text, txtNumAccount.Text);
+
+                //Atribuindo o objeto ao BankStatement
+                bkDao.DepositBankStatement(b);
+                MessageBox.Show("Cadastrado !");
+                Limpar(this);
+                lblNegative.Text = "-";
+            }
+        }
+        #endregion
     }
 }

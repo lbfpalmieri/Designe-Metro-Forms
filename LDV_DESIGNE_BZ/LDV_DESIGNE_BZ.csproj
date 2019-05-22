@@ -55,7 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Bank.cs" />
+    <Compile Include="Class\BankDAO.cs" />
     <Compile Include="Class\DataAccess.cs" />
+    <Compile Include="Class\User.cs" />
+    <Compile Include="Class\UserDAO.cs" />
     <Compile Include="Forms\frmDebit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +71,11 @@
     </Compile>
     <Compile Include="Forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LDV_PEDREIRADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LDV_PEDREIRADataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +95,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="LDV_PEDREIRADataSet.xsc">
+      <DependentUpon>LDV_PEDREIRADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LDV_PEDREIRADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LDV_PEDREIRADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LDV_PEDREIRADataSet.xss">
+      <DependentUpon>LDV_PEDREIRADataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

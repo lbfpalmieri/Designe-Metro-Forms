@@ -21,7 +21,7 @@ namespace LDV_DESIGNE_BZ.Class
             try
             {
                 // Obtemos os dados da conexão 
-                string dadosConexao = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=adoNET;User ID=sa;Password=123456";
+                string dadosConexao = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=LDV_PEDREIRA;User ID=sa;Password=123456";
                 // Instanciando o objeto SqlConnection
                 sqlconnection = new SqlConnection(dadosConexao);
                 //Verifica se a conexão esta fechada.

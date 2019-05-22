@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDebit));
             this.txtValue = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -35,10 +36,17 @@
             this.txtDesc = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtNumAccount = new MetroFramework.Controls.MetroComboBox();
+            this.lDVBANKACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lDV_PEDREIRADataSet = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSet();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.btnDebit = new System.Windows.Forms.Button();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.lDVBANKACCOUNTTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter();
+            this.txtSetValue = new System.Windows.Forms.TextBox();
+            this.lblNegative = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtValue
@@ -74,6 +82,8 @@
             this.txtValue.WaterMark = "R$ 1000.00";
             this.txtValue.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtValue.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValue.Enter += new System.EventHandler(this.txtValue_Enter);
+            this.txtValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValue_KeyPress);
             // 
             // metroLabel1
             // 
@@ -89,13 +99,13 @@
             this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtData.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtData.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.txtData.CustomFormat = "dd/MM/yyyy";
             this.txtData.Enabled = false;
             this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtData.Location = new System.Drawing.Point(179, 225);
             this.txtData.MinimumSize = new System.Drawing.Size(0, 29);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(140, 29);
+            this.txtData.Size = new System.Drawing.Size(100, 29);
             this.txtData.TabIndex = 2;
             this.metroToolTip1.SetToolTip(this.txtData, "Esse campo não é modificavel \r\npor quentão de segurança.");
             // 
@@ -144,6 +154,8 @@
             // 
             // txtNumAccount
             // 
+            this.txtNumAccount.DataSource = this.lDVBANKACCOUNTBindingSource;
+            this.txtNumAccount.DisplayMember = "NUMBERACCOUNT";
             this.txtNumAccount.FormattingEnabled = true;
             this.txtNumAccount.ItemHeight = 23;
             this.txtNumAccount.Location = new System.Drawing.Point(25, 225);
@@ -153,6 +165,17 @@
             this.txtNumAccount.TabIndex = 5;
             this.metroToolTip1.SetToolTip(this.txtNumAccount, "Selecione a conta bancária \r\nque deseja fazer o débito.");
             this.txtNumAccount.UseSelectable = true;
+            this.txtNumAccount.ValueMember = "NUMBERACCOUNT";
+            // 
+            // lDVBANKACCOUNTBindingSource
+            // 
+            this.lDVBANKACCOUNTBindingSource.DataMember = "LDVBANKACCOUNT";
+            this.lDVBANKACCOUNTBindingSource.DataSource = this.lDV_PEDREIRADataSet;
+            // 
+            // lDV_PEDREIRADataSet
+            // 
+            this.lDV_PEDREIRADataSet.DataSetName = "LDV_PEDREIRADataSet";
+            this.lDV_PEDREIRADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // metroLabel3
             // 
@@ -189,6 +212,7 @@
             this.btnDebit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.metroToolTip1.SetToolTip(this.btnDebit, "Click aqui para finalizar seu débito.");
             this.btnDebit.UseVisualStyleBackColor = true;
+            this.btnDebit.Click += new System.EventHandler(this.btnDebit_Click);
             // 
             // metroToolTip1
             // 
@@ -196,11 +220,36 @@
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // lDVBANKACCOUNTTableAdapter
+            // 
+            this.lDVBANKACCOUNTTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtSetValue
+            // 
+            this.txtSetValue.Location = new System.Drawing.Point(179, 109);
+            this.txtSetValue.Name = "txtSetValue";
+            this.txtSetValue.Size = new System.Drawing.Size(43, 20);
+            this.txtSetValue.TabIndex = 10;
+            this.txtSetValue.Visible = false;
+            // 
+            // lblNegative
+            // 
+            this.lblNegative.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNegative.AutoSize = true;
+            this.lblNegative.Location = new System.Drawing.Point(157, 112);
+            this.lblNegative.Name = "lblNegative";
+            this.lblNegative.Size = new System.Drawing.Size(10, 13);
+            this.lblNegative.TabIndex = 9;
+            this.lblNegative.Text = "-";
+            this.lblNegative.Visible = false;
+            // 
             // frmDebit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(345, 335);
+            this.Controls.Add(this.txtSetValue);
+            this.Controls.Add(this.lblNegative);
             this.Controls.Add(this.btnDebit);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
@@ -218,6 +267,9 @@
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowInTaskbar = false;
             this.Text = "Faça um débito na conta";
+            this.Load += new System.EventHandler(this.frmDebit_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +287,10 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.Button btnDebit;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
+        private LDV_PEDREIRADataSet lDV_PEDREIRADataSet;
+        private System.Windows.Forms.BindingSource lDVBANKACCOUNTBindingSource;
+        private LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter lDVBANKACCOUNTTableAdapter;
+        private System.Windows.Forms.TextBox txtSetValue;
+        private System.Windows.Forms.Label lblNegative;
     }
 }
