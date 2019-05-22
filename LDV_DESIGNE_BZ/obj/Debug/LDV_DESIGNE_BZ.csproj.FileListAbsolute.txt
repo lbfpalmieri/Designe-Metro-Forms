@@ -27,3 +27,4 @@ C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debu
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.pdb
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.Forms.frmDebit.resources
 C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.frmMenu.resources
+C:\Users\lbfpalmieri\Desktop\Project\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.Forms.frmDeposit.resources

@@ -200,7 +200,7 @@
             this.btnDebit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDebit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDebit.FlatAppearance.BorderSize = 0;
-            this.btnDebit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDebit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDebit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDebit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDebit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.debitALLrz;

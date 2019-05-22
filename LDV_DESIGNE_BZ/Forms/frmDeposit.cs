@@ -2,28 +2,28 @@
 using System.Linq;
 using System.Windows.Forms;
 using LDV_DESIGNE_BZ.Class;
+using MetroFramework.Forms;
 
 namespace LDV_DESIGNE_BZ.Forms
 {
-    public partial class frmDebit : MetroFramework.Forms.MetroForm
+    public partial class frmDeposit : MetroFramework.Forms.MetroForm
     {
         BankDAO bkDao = new BankDAO();
         Bank b = new Bank();
 
-        public frmDebit()
+        public frmDeposit()
         {
             InitializeComponent();
-        }      
+        }
 
         #region Load()
-        private void frmDebit_Load(object sender, EventArgs e)
+        private void frmDeposit_Load(object sender, System.EventArgs e)
         {
             this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
-            txtNumAccount.SelectedIndex = -1;
         }
         #endregion
 
-        #region Limpar();
+        #region Limpar()
         private void Limpar(Control controles)
         {
             foreach (Control ctr in controles.Controls)
@@ -52,15 +52,32 @@ namespace LDV_DESIGNE_BZ.Forms
                 }
             }
         }
+        #endregion
 
+        #region Enter() txtValue
+        private void txtValue_Enter(object sender, System.EventArgs e)
+        {
+            String x = "";
+            for (int i = 0; i <= txtValue.Text.Length - 1; i++)
+            {
+                if ((txtValue.Text[i] >= '0' &&
+                    txtValue.Text[i] <= '9') ||
+                    txtValue.Text[i] == ',')
+                {
+                    x += txtValue.Text[i];
+                }
+            }
+            txtValue.Text = x;
+            txtValue.SelectAll();
+        }
         #endregion
 
         #region KeyPress() txtValue
         private void txtValue_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') &&
-             (e.KeyChar != ',' && e.KeyChar != '.' &&
-              e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
+              (e.KeyChar != ',' && e.KeyChar != '.' &&
+               e.KeyChar != (Char)13 && e.KeyChar != (Char)8))
             {
                 e.KeyChar = (Char)0;
             }
@@ -79,30 +96,10 @@ namespace LDV_DESIGNE_BZ.Forms
                 }
             }
         }
-
-        #endregion
-
-        #region Enter() txtValue
-        private void txtValue_Enter(object sender, EventArgs e)
-        {
-            String x = "";
-            for (int i = 0; i <= txtValue.Text.Length - 1; i++)
-            {
-                if ((txtValue.Text[i] >= '0' &&
-                    txtValue.Text[i] <= '9') ||
-                    txtValue.Text[i] == ',')
-                {
-                    x += txtValue.Text[i];
-                }
-            }
-            txtValue.Text = x;
-            txtValue.SelectAll();
-        }
-
         #endregion
 
         #region Realizando um débito na conta
-        private void btnDebit_Click(object sender, EventArgs e)
+        private void btnDeposit_Click(object sender, EventArgs e)
         {
             if (txtDesc.Text == string.Empty || txtValue.Text == string.Empty || txtData.Text == string.Empty)
             {
@@ -116,7 +113,7 @@ namespace LDV_DESIGNE_BZ.Forms
             else
             {
                 //Transformando o valor positivo em negativo
-                txtSetValue.Text = lblNegative.Text + txtValue.Text;
+                txtSetValue.Text = lblPositive.Text + txtValue.Text;
 
                 //Atribuindo as informações para a o banco
                 Bank b = new Bank(Convert.ToDecimal(txtSetValue.Text), Convert.ToDateTime(txtData.Text), txtDesc.Text, txtNumAccount.Text);
@@ -125,7 +122,7 @@ namespace LDV_DESIGNE_BZ.Forms
                 bkDao.DepositBankStatement(b);
                 MessageBox.Show("Cadastrado !");
                 Limpar(this);
-                lblNegative.Text = "-";
+                lblPositive.Text = "-";
             }
         }
         #endregion

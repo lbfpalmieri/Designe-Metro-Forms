@@ -92,6 +92,7 @@
             this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.metroToolTip1.SetToolTip(this.btnDeposit, "Registrar um depósito");
             this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // pictureBox1
             // 

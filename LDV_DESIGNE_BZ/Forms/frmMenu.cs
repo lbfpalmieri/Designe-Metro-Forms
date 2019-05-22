@@ -17,5 +17,13 @@ namespace LDV_DESIGNE_BZ
                 debit.ShowDialog();
             }
         }
+
+        private void btnDeposit_Click(object sender, System.EventArgs e)
+        {
+            using (frmDeposit deposit = new frmDeposit())
+            {
+                deposit.ShowDialog();
+            }
+        }
     }
 }
