@@ -159,5 +159,17 @@
   <ItemGroup>
     <None Include="Resources\depositALLrz.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OneStracts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AllExtracts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfigSilver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

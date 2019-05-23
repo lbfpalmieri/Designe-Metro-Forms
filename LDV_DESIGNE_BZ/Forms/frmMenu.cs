@@ -1,5 +1,6 @@
 ﻿using MetroFramework.Forms;
 using LDV_DESIGNE_BZ.Forms;
+using System.Windows.Forms;
 
 namespace LDV_DESIGNE_BZ
 {
@@ -24,6 +25,16 @@ namespace LDV_DESIGNE_BZ
             {
                 deposit.ShowDialog();
             }
+        }
+
+        private void btnUnicAccount_Click(object sender, System.EventArgs e)
+        {
+            MessageBox.Show("Em construção", "ALERTA !", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+        }
+
+        private void btnAllAccounts_Click(object sender, System.EventArgs e)
+        {
+            MessageBox.Show("Em construção", "ALERTA !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }
