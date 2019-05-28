@@ -18,6 +18,7 @@ namespace LDV_DESIGNE_BZ.Forms
         #region Load()
         private void frmDebit_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'lDV_PEDREIRADataSet.LDVBANKACCOUNT'. Você pode movê-la ou removê-la conforme necessário.
             this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
             txtNumAccount.SelectedIndex = -1;
         }

@@ -2,7 +2,7 @@
 
 namespace LDV_DESIGNE_BZ.Class
 {
-    class Bank
+    class Bank : User
     {
         public decimal ValueStatement { get; set; }
         public DateTime DateStatement { get; set; }
@@ -11,7 +11,12 @@ namespace LDV_DESIGNE_BZ.Class
 
         public Bank()
         {
+        }
 
+        public Bank(string numberAccountBank, string cpfHolder) :base(cpfHolder)
+        {
+            NumberAccountBank = numberAccountBank;
+            CPFuser = cpfHolder;
         }
 
         public Bank(decimal value, DateTime date, string desc, string number)

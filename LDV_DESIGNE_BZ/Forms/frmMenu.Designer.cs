@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDebit = new System.Windows.Forms.Button();
+            this.btnDeposit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAllAccounts = new System.Windows.Forms.Button();
             this.btnUnicAccount = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDebit = new System.Windows.Forms.Button();
-            this.btnDeposit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,11 +56,47 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 88);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(314, 170);
+            this.groupBox1.Size = new System.Drawing.Size(364, 170);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entrada / Saída de dinheiro";
             this.metroToolTip1.SetToolTip(this.groupBox1, "Aqui faça o controle total do\r\ndinheiro que entra/sai da(s) sua(s) conta(s).");
+            // 
+            // btnDebit
+            // 
+            this.btnDebit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDebit.FlatAppearance.BorderSize = 0;
+            this.btnDebit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDebit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDebit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.Debit96;
+            this.btnDebit.Location = new System.Drawing.Point(182, 29);
+            this.btnDebit.Name = "btnDebit";
+            this.btnDebit.Size = new System.Drawing.Size(176, 135);
+            this.btnDebit.TabIndex = 2;
+            this.btnDebit.Text = "Débito";
+            this.btnDebit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.metroToolTip1.SetToolTip(this.btnDebit, "Registrar um débito.");
+            this.btnDebit.UseVisualStyleBackColor = true;
+            this.btnDebit.Click += new System.EventHandler(this.btnDebit_Click);
+            // 
+            // btnDeposit
+            // 
+            this.btnDeposit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeposit.FlatAppearance.BorderSize = 0;
+            this.btnDeposit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeposit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeposit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.Balance96;
+            this.btnDeposit.Location = new System.Drawing.Point(6, 29);
+            this.btnDeposit.Name = "btnDeposit";
+            this.btnDeposit.Size = new System.Drawing.Size(170, 135);
+            this.btnDeposit.TabIndex = 1;
+            this.btnDeposit.Text = "Depósito";
+            this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.metroToolTip1.SetToolTip(this.btnDeposit, "Registrar um depósito.");
+            this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // groupBox2
             // 
@@ -70,7 +106,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(23, 264);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(314, 170);
+            this.groupBox2.Size = new System.Drawing.Size(364, 170);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gerenciamento de conta(s)";
@@ -84,9 +120,9 @@
             this.btnAllAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAllAccounts.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllAccounts.Image = global::LDV_DESIGNE_BZ.Properties.Resources.Search;
-            this.btnAllAccounts.Location = new System.Drawing.Point(157, 29);
+            this.btnAllAccounts.Location = new System.Drawing.Point(182, 29);
             this.btnAllAccounts.Name = "btnAllAccounts";
-            this.btnAllAccounts.Size = new System.Drawing.Size(145, 135);
+            this.btnAllAccounts.Size = new System.Drawing.Size(176, 135);
             this.btnAllAccounts.TabIndex = 2;
             this.btnAllAccounts.Text = "Pesquisar conta(s)";
             this.btnAllAccounts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -104,7 +140,7 @@
             this.btnUnicAccount.Image = global::LDV_DESIGNE_BZ.Properties.Resources.ConfigSilver;
             this.btnUnicAccount.Location = new System.Drawing.Point(6, 29);
             this.btnUnicAccount.Name = "btnUnicAccount";
-            this.btnUnicAccount.Size = new System.Drawing.Size(145, 135);
+            this.btnUnicAccount.Size = new System.Drawing.Size(170, 135);
             this.btnUnicAccount.TabIndex = 1;
             this.btnUnicAccount.Text = "Gerenciar conta(s)";
             this.btnUnicAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -124,42 +160,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnDebit
-            // 
-            this.btnDebit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDebit.FlatAppearance.BorderSize = 0;
-            this.btnDebit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDebit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDebit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDebit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.Debit96;
-            this.btnDebit.Location = new System.Drawing.Point(157, 29);
-            this.btnDebit.Name = "btnDebit";
-            this.btnDebit.Size = new System.Drawing.Size(145, 135);
-            this.btnDebit.TabIndex = 2;
-            this.btnDebit.Text = "Débito";
-            this.btnDebit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.metroToolTip1.SetToolTip(this.btnDebit, "Registrar um débito.");
-            this.btnDebit.UseVisualStyleBackColor = true;
-            this.btnDebit.Click += new System.EventHandler(this.btnDebit_Click);
-            // 
-            // btnDeposit
-            // 
-            this.btnDeposit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeposit.FlatAppearance.BorderSize = 0;
-            this.btnDeposit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeposit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeposit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.Balance96;
-            this.btnDeposit.Location = new System.Drawing.Point(6, 29);
-            this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(145, 135);
-            this.btnDeposit.TabIndex = 1;
-            this.btnDeposit.Text = "Depósito";
-            this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.metroToolTip1.SetToolTip(this.btnDeposit, "Registrar um depósito.");
-            this.btnDeposit.UseVisualStyleBackColor = true;
-            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // frmMenu
             // 

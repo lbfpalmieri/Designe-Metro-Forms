@@ -19,6 +19,7 @@ namespace LDV_DESIGNE_BZ.Forms
         #region Load()
         private void frmDeposit_Load(object sender, System.EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'lDV_PEDREIRADataSet.LDVBANKACCOUNT'. Você pode movê-la ou removê-la conforme necessário.
             this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
         }
         #endregion

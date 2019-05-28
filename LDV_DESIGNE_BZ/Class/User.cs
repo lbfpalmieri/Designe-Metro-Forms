@@ -10,5 +10,25 @@
         public string TipoUser { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public User()
+        {
+        }
+
+        public User(string cPFuser)
+        {
+            CPFuser = cPFuser;
+        }
+
+        public User(string cPFuser, string nameUser, string passUser, string emailUser, string telUser, string tipoUser, string firstName, string lastName) : this(cPFuser)
+        {
+            NameUser = nameUser;
+            PassUser = passUser;
+            EmailUser = emailUser;
+            TelUser = telUser;
+            TipoUser = tipoUser;
+            FirstName = firstName;
+            LastName = lastName;
+        }
     }
 }

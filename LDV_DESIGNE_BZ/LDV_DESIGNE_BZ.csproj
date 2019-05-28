@@ -60,6 +60,12 @@
     <Compile Include="Class\DataAccess.cs" />
     <Compile Include="Class\User.cs" />
     <Compile Include="Class\UserDAO.cs" />
+    <Compile Include="Forms\frmConfigAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfigAccount.Designer.cs">
+      <DependentUpon>frmConfigAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDebit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmConfigAccount.resx">
+      <DependentUpon>frmConfigAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDebit.resx">
       <DependentUpon>frmDebit.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

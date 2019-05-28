@@ -29,7 +29,10 @@ namespace LDV_DESIGNE_BZ
 
         private void btnUnicAccount_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Em construção", "ALERTA !", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            using (frmConfigAccount config = new frmConfigAccount())
+            {
+                config.ShowDialog();
+            }
         }
 
         private void btnAllAccounts_Click(object sender, System.EventArgs e)
