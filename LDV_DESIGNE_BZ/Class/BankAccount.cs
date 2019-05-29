@@ -10,6 +10,7 @@ namespace LDV_DESIGNE_BZ.Class
     {
         public string NumberAccount { get; set; }
         public string CPFHolder { get; set; }
+        public string NumberAccAlter { get; set; }
 
         public BankAccount()
         {
@@ -19,6 +20,11 @@ namespace LDV_DESIGNE_BZ.Class
         {
             NumberAccount = numberAccount;
             CPFHolder = cPFHolder;
+        }
+
+        public BankAccount(string numberAccount, string cPFHolder, string numberAccAlter) : this(numberAccount, cPFHolder)
+        {
+            NumberAccAlter = numberAccAlter;
         }
     }
 }

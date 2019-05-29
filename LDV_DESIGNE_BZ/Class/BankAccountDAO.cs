@@ -41,5 +41,25 @@ namespace LDV_DESIGNE_BZ.Class
             return false;
         }
         #endregion
+
+        #region AlterAccount
+        public bool AlterarCliente(BankAccount BankAcc)
+        {
+            // Limpando os parâmetros
+            query.LimparParametros();
+            string SQL = @"UPDATE LDVBANKACCOUNT SET
+                            NUMBERACCOUNT = @NUMBERACCOUNT,
+                            CPFHOLDER = @CPFHOLDER
+                            WHERE NUMBERACCOUNT = @NUMBERACCOUNT1";
+            // Adicionando novos parâmetros
+            query.AdicionarParametro("@NUMBERACCOUNT1", SqlDbType.VarChar, BankAcc.NumberAccAlter);
+            query.AdicionarParametro("@NUMBERACCOUNT", SqlDbType.VarChar, BankAcc.NumberAccount);
+            query.AdicionarParametro("@CPFHOLDER", SqlDbType.VarChar, BankAcc.CPFHolder);
+            // Executando a atualização na base verificando se o update executou com sucesso
+            if (query.ExecutaAtualizacao(SQL) > 0)
+                return true;
+            return false;
+        }
+        #endregion
     }
 }
