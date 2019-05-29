@@ -8,8 +8,6 @@ namespace LDV_DESIGNE_BZ.Class
     {
         DataAccess query = new DataAccess();
 
-        //COLOCAR INSERIR ACCOUNT AQUI
-
         #region INSERT
         public bool DepositBankStatement(Bank bank)
         {

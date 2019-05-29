@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Bank.cs" />
+    <Compile Include="Class\BankAccount.cs" />
+    <Compile Include="Class\BankAccountDAO.cs" />
     <Compile Include="Class\BankDAO.cs" />
     <Compile Include="Class\DataAccess.cs" />
     <Compile Include="Class\User.cs" />
@@ -182,6 +184,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
