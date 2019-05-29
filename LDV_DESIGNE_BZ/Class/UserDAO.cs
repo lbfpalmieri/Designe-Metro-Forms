@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace LDV_DESIGNE_BZ.Class
@@ -6,7 +7,9 @@ namespace LDV_DESIGNE_BZ.Class
     class UserDAO
     {
         User u = new User();
+        DataAccess query = new DataAccess();
 
+        //arrumar pq ta errado
         #region AddUser()
         public void AddUser(string cpfUser, string nameUser, string passUser, string emailUser, string telUser, string tipoUser, string firstName, string lastName)
         {
@@ -46,6 +49,24 @@ namespace LDV_DESIGNE_BZ.Class
 
                 throw;
             }
+        }
+        #endregion
+
+        #region AlterAccount
+        public bool AlterarUser(User User)
+        {
+            // Limpando os parâmetros
+            query.LimparParametros();
+            string SQL = @"UPDATE LDVACCOUNTUSER SET
+                            CPFUSER = @CPFUSER
+                            WHERE CPFUSER = @CPFUSER1";
+            // Adicionando novos parâmetros
+            query.AdicionarParametro("@CPFUSER1", SqlDbType.VarChar, User.CPFuser);
+            query.AdicionarParametro("@CPFUSER", SqlDbType.VarChar, User.CPFAlter);
+            // Executando a atualização na base verificando se o update executou com sucesso
+            if (query.ExecutaAtualizacao(SQL) > 0)
+                return true;
+            return false;
         }
         #endregion
     }

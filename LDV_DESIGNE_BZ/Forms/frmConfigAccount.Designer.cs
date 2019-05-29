@@ -32,44 +32,42 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfigAccount));
-            this.lDVBANKACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lDV_PEDREIRADataSet = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSet();
-            this.lDVBANKACCOUNTTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter();
             this.txtNumAcc = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtCpfHolder = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAddAccount = new System.Windows.Forms.Button();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.NUMBERACCOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPFHOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnAddAccount = new System.Windows.Forms.Button();
+            this.lDVBANKACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lDV_PEDREIRADataSet = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSet();
             this.txtNumAccAlter = new MetroFramework.Controls.MetroTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).BeginInit();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.CPFUSER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lDVACCOUNTUSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtCPFHOLDERparam = new MetroFramework.Controls.MetroTextBox();
+            this.lDVACCOUNTUSERTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVACCOUNTUSERTableAdapter();
+            this.lDVBANKACCOUNTTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDVACCOUNTUSERBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lDVBANKACCOUNTBindingSource
-            // 
-            this.lDVBANKACCOUNTBindingSource.DataMember = "LDVBANKACCOUNT";
-            this.lDVBANKACCOUNTBindingSource.DataSource = this.lDV_PEDREIRADataSet;
-            // 
-            // lDV_PEDREIRADataSet
-            // 
-            this.lDV_PEDREIRADataSet.DataSetName = "LDV_PEDREIRADataSet";
-            this.lDV_PEDREIRADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lDVBANKACCOUNTTableAdapter
-            // 
-            this.lDVBANKACCOUNTTableAdapter.ClearBeforeFill = true;
             // 
             // txtNumAcc
             // 
@@ -173,13 +171,76 @@
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.txtCpfHolder);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(292, 77);
+            this.groupBox1.Location = new System.Drawing.Point(712, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 349);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gerencie uma conta";
             this.metroToolTip1.SetToolTip(this.groupBox1, "Aqui você pode inserir novas contas\r\nbancarias para controlar seus gastos.");
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BurlyWood;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.edit30;
+            this.btnEdit.Location = new System.Drawing.Point(27, 288);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(212, 41);
+            this.btnEdit.TabIndex = 11;
+            this.btnEdit.Text = "Alterar uma conta";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.metroToolTip1.SetToolTip(this.btnEdit, "Click para editar a conta que você\r\npreencheu no \"Número da conta\" e no\r\n\"CPF tit" +
+        "ular\".");
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Image = global::LDV_DESIGNE_BZ.Properties.Resources.remove30;
+            this.btnRemove.Location = new System.Drawing.Point(27, 239);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(212, 41);
+            this.btnRemove.TabIndex = 10;
+            this.btnRemove.Text = "Remover uma conta";
+            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.metroToolTip1.SetToolTip(this.btnRemove, "Click para remover a conta que você\r\npreencheu no \"Número da conta\" e no\r\n\"CPF ti" +
+        "tular\".");
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnAddAccount
+            // 
+            this.btnAddAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddAccount.FlatAppearance.BorderSize = 0;
+            this.btnAddAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAccount.Image = global::LDV_DESIGNE_BZ.Properties.Resources.add30;
+            this.btnAddAccount.Location = new System.Drawing.Point(27, 190);
+            this.btnAddAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddAccount.Name = "btnAddAccount";
+            this.btnAddAccount.Size = new System.Drawing.Size(212, 41);
+            this.btnAddAccount.TabIndex = 9;
+            this.btnAddAccount.Text = "Adicionar uma conta";
+            this.btnAddAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.metroToolTip1.SetToolTip(this.btnAddAccount, "Click para adicionar a conta que você\r\npreencheu no \"Número da conta\" e no\r\n\"CPF " +
+        "titular\".");
+            this.btnAddAccount.UseVisualStyleBackColor = true;
+            this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
             // metroToolTip1
             // 
@@ -191,7 +252,7 @@
             // 
             this.groupBox2.Controls.Add(this.metroGrid1);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(24, 77);
+            this.groupBox2.Location = new System.Drawing.Point(365, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(245, 349);
             this.groupBox2.TabIndex = 11;
@@ -272,68 +333,15 @@
             this.CPFHOLDER.ReadOnly = true;
             this.CPFHOLDER.Visible = false;
             // 
-            // btnEdit
+            // lDVBANKACCOUNTBindingSource
             // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BurlyWood;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.edit30;
-            this.btnEdit.Location = new System.Drawing.Point(27, 288);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(212, 41);
-            this.btnEdit.TabIndex = 11;
-            this.btnEdit.Text = "Alterar uma conta";
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.metroToolTip1.SetToolTip(this.btnEdit, "Click para editar a conta que você\r\npreencheu no \"Número da conta\" e no\r\n\"CPF tit" +
-        "ular\".");
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.lDVBANKACCOUNTBindingSource.DataMember = "LDVBANKACCOUNT";
+            this.lDVBANKACCOUNTBindingSource.DataSource = this.lDV_PEDREIRADataSet;
             // 
-            // btnRemove
+            // lDV_PEDREIRADataSet
             // 
-            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Image = global::LDV_DESIGNE_BZ.Properties.Resources.remove30;
-            this.btnRemove.Location = new System.Drawing.Point(27, 239);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(212, 41);
-            this.btnRemove.TabIndex = 10;
-            this.btnRemove.Text = "Remover uma conta";
-            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.metroToolTip1.SetToolTip(this.btnRemove, "Click para remover a conta que você\r\npreencheu no \"Número da conta\" e no\r\n\"CPF ti" +
-        "tular\".");
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnAddAccount
-            // 
-            this.btnAddAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAccount.FlatAppearance.BorderSize = 0;
-            this.btnAddAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAccount.Image = global::LDV_DESIGNE_BZ.Properties.Resources.add30;
-            this.btnAddAccount.Location = new System.Drawing.Point(27, 190);
-            this.btnAddAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddAccount.Name = "btnAddAccount";
-            this.btnAddAccount.Size = new System.Drawing.Size(212, 41);
-            this.btnAddAccount.TabIndex = 9;
-            this.btnAddAccount.Text = "Adicionar uma conta";
-            this.btnAddAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.metroToolTip1.SetToolTip(this.btnAddAccount, "Click para adicionar a conta que você\r\npreencheu no \"Número da conta\" e no\r\n\"CPF " +
-        "titular\".");
-            this.btnAddAccount.UseVisualStyleBackColor = true;
-            this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
+            this.lDV_PEDREIRADataSet.DataSetName = "LDV_PEDREIRADataSet";
+            this.lDV_PEDREIRADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtNumAccAlter
             // 
@@ -352,7 +360,7 @@
             this.txtNumAccAlter.CustomButton.Visible = false;
             this.txtNumAccAlter.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtNumAccAlter.Lines = new string[0];
-            this.txtNumAccAlter.Location = new System.Drawing.Point(292, 42);
+            this.txtNumAccAlter.Location = new System.Drawing.Point(456, 42);
             this.txtNumAccAlter.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumAccAlter.MaxLength = 32767;
             this.txtNumAccAlter.Name = "txtNumAccAlter";
@@ -372,10 +380,137 @@
             this.txtNumAccAlter.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNumAccAlter.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.metroGrid2);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Location = new System.Drawing.Point(23, 77);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(262, 349);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Contas já cadastradas";
+            this.metroToolTip1.SetToolTip(this.groupBox3, "Aqui se encontram as contas\r\nque ja estão cadastradas no \r\nsistema.");
+            // 
+            // metroGrid2
+            // 
+            this.metroGrid2.AllowUserToAddRows = false;
+            this.metroGrid2.AllowUserToDeleteRows = false;
+            this.metroGrid2.AllowUserToResizeRows = false;
+            this.metroGrid2.AutoGenerateColumns = false;
+            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metroGrid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CPFUSER});
+            this.metroGrid2.DataSource = this.lDVACCOUNTUSERBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.metroGrid2.EnableHeadersVisualStyles = false;
+            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid2.Location = new System.Drawing.Point(6, 29);
+            this.metroGrid2.MultiSelect = false;
+            this.metroGrid2.Name = "metroGrid2";
+            this.metroGrid2.ReadOnly = true;
+            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroGrid2.RowTemplate.Height = 24;
+            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid2.Size = new System.Drawing.Size(250, 300);
+            this.metroGrid2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroGrid2.TabIndex = 10;
+            this.metroGrid2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroGrid2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid2_CellContentClick);
+            // 
+            // CPFUSER
+            // 
+            this.CPFUSER.DataPropertyName = "CPFUSER";
+            this.CPFUSER.HeaderText = "CPF no sistema";
+            this.CPFUSER.Name = "CPFUSER";
+            this.CPFUSER.ReadOnly = true;
+            this.CPFUSER.Width = 205;
+            // 
+            // lDVACCOUNTUSERBindingSource
+            // 
+            this.lDVACCOUNTUSERBindingSource.DataMember = "LDVACCOUNTUSER";
+            this.lDVACCOUNTUSERBindingSource.DataSource = this.lDV_PEDREIRADataSet;
+            // 
+            // txtCPFHOLDERparam
+            // 
+            // 
+            // 
+            // 
+            this.txtCPFHOLDERparam.CustomButton.Image = null;
+            this.txtCPFHOLDERparam.CustomButton.Location = new System.Drawing.Point(57, 2);
+            this.txtCPFHOLDERparam.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCPFHOLDERparam.CustomButton.Name = "";
+            this.txtCPFHOLDERparam.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtCPFHOLDERparam.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCPFHOLDERparam.CustomButton.TabIndex = 1;
+            this.txtCPFHOLDERparam.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCPFHOLDERparam.CustomButton.UseSelectable = true;
+            this.txtCPFHOLDERparam.CustomButton.Visible = false;
+            this.txtCPFHOLDERparam.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtCPFHOLDERparam.Lines = new string[0];
+            this.txtCPFHOLDERparam.Location = new System.Drawing.Point(365, 42);
+            this.txtCPFHOLDERparam.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCPFHOLDERparam.MaxLength = 32767;
+            this.txtCPFHOLDERparam.Name = "txtCPFHOLDERparam";
+            this.txtCPFHOLDERparam.PasswordChar = '\0';
+            this.txtCPFHOLDERparam.PromptText = "Ex: 21.877-2";
+            this.txtCPFHOLDERparam.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCPFHOLDERparam.SelectedText = "";
+            this.txtCPFHOLDERparam.SelectionLength = 0;
+            this.txtCPFHOLDERparam.SelectionStart = 0;
+            this.txtCPFHOLDERparam.ShortcutsEnabled = true;
+            this.txtCPFHOLDERparam.Size = new System.Drawing.Size(83, 28);
+            this.txtCPFHOLDERparam.TabIndex = 14;
+            this.metroToolTip1.SetToolTip(this.txtCPFHOLDERparam, "Aqui você insere o número da conta\r\nque deseja cadastrar.");
+            this.txtCPFHOLDERparam.UseSelectable = true;
+            this.txtCPFHOLDERparam.WaterMark = "Ex: 21.877-2";
+            this.txtCPFHOLDERparam.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCPFHOLDERparam.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // lDVACCOUNTUSERTableAdapter
+            // 
+            this.lDVACCOUNTUSERTableAdapter.ClearBeforeFill = true;
+            // 
+            // lDVBANKACCOUNTTableAdapter
+            // 
+            this.lDVBANKACCOUNTTableAdapter.ClearBeforeFill = true;
+            // 
             // frmConfigAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(591, 449);
+            this.ClientSize = new System.Drawing.Size(1004, 601);
+            this.Controls.Add(this.txtCPFHOLDERparam);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtNumAccAlter);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -388,20 +523,20 @@
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "Gerenciar conta(s)";
             this.Load += new System.EventHandler(this.frmConfigAccount_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDVACCOUNTUSERBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private LDV_PEDREIRADataSet lDV_PEDREIRADataSet;
-        private System.Windows.Forms.BindingSource lDVBANKACCOUNTBindingSource;
-        private LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter lDVBANKACCOUNTTableAdapter;
         private MetroFramework.Controls.MetroTextBox txtNumAcc;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
@@ -412,9 +547,18 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnRemove;
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NUMBERACCOUNT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPFHOLDER;
         private System.Windows.Forms.Button btnEdit;
         private MetroFramework.Controls.MetroTextBox txtNumAccAlter;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private MetroFramework.Controls.MetroGrid metroGrid2;
+        private MetroFramework.Controls.MetroTextBox txtCPFHOLDERparam;
+        private LDV_PEDREIRADataSet lDV_PEDREIRADataSet;
+        private System.Windows.Forms.BindingSource lDVACCOUNTUSERBindingSource;
+        private LDV_PEDREIRADataSetTableAdapters.LDVACCOUNTUSERTableAdapter lDVACCOUNTUSERTableAdapter;
+        private System.Windows.Forms.BindingSource lDVBANKACCOUNTBindingSource;
+        private LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter lDVBANKACCOUNTTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NUMBERACCOUNT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPFHOLDER;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPFUSER;
     }
 }

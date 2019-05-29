@@ -15,6 +15,8 @@ namespace LDV_DESIGNE_BZ.Forms
         {
             // TODO: esta linha de código carrega dados na tabela 'lDV_PEDREIRADataSet.LDVBANKACCOUNT'. Você pode movê-la ou removê-la conforme necessário.
             this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
+            // TODO: esta linha de código carrega dados na tabela 'lDV_PEDREIRADataSet.LDVACCOUNTUSER'. Você pode movê-la ou removê-la conforme necessário.
+            this.lDVACCOUNTUSERTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVACCOUNTUSER);
         }
 
         #region Limpar();
@@ -81,6 +83,7 @@ namespace LDV_DESIGNE_BZ.Forms
                 DataGridViewRow row = this.metroGrid1.Rows[e.RowIndex];
                 txtNumAcc.Text = row.Cells["NUMBERACCOUNT"].Value.ToString();
                 txtCpfHolder.Text = row.Cells["CPFHOLDER"].Value.ToString();
+                txtCPFHOLDERparam.Text = row.Cells["CPFHOLDER"].Value.ToString();
                 txtNumAccAlter.Text = row.Cells["NUMBERACCOUNT"].Value.ToString();
             }
             catch (Exception)
@@ -88,6 +91,22 @@ namespace LDV_DESIGNE_BZ.Forms
             }
         }
         #endregion
+
+        private void metroGrid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*Melhor solução encontrada para resolver a exception que estava ocorrendo ao clicar
+            no esquema de filtro do DataGrid, caso aconteça mais algum bug é necessarios arrumar
+            aqui.*/
+            try
+            {
+                DataGridViewRow row = this.metroGrid2.Rows[e.RowIndex];
+                txtCPFHOLDERparam.Text = row.Cells["CPFUSER"].Value.ToString();
+                txtCpfHolder.Text = row.Cells["CPFUSER"].Value.ToString();
+            }
+            catch (Exception)
+            {
+            }
+        }
 
         #region Botão para remover uma conta bancaria do sistema
         private void btnRemove_Click(object sender, EventArgs e)
@@ -138,12 +157,17 @@ namespace LDV_DESIGNE_BZ.Forms
                     //Atribuindo as informações para a o banco
                     BankAccount bAcc = new BankAccount(txtNumAcc.Text, txtCpfHolder.Text, txtNumAccAlter.Text);
                     BankAccountDAO bkAccDao = new BankAccountDAO();
+                    User user = new User(txtCPFHOLDERparam.Text, txtCpfHolder.Text);
+                    UserDAO uDal = new UserDAO();
 
                     //Atribuindo o objeto ao BankStatement
-                    bkAccDao.AlterarCliente(bAcc);
+                    bkAccDao.AlterarAccount(bAcc);
+                    uDal.AlterarUser(user);
                     MessageBox.Show("Alterado !");
                     Limpar(this);
                     this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
+                    this.lDVACCOUNTUSERTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVACCOUNTUSER);
+
                 }
                 else if (result == DialogResult.No)
                 {

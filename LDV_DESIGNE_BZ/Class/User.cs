@@ -3,6 +3,7 @@
     class User
     {
         public string CPFuser { get; set; }
+        public string CPFAlter { get; set; }
         public string NameUser { get; set; }
         public string PassUser { get; set; }
         public string EmailUser { get; set; }
@@ -15,12 +16,13 @@
         {
         }
 
-        public User(string cPFuser)
+        public User(string cPFuser, string cPFAlter)
         {
             CPFuser = cPFuser;
+            CPFAlter = cPFAlter;
         }
 
-        public User(string cPFuser, string nameUser, string passUser, string emailUser, string telUser, string tipoUser, string firstName, string lastName) : this(cPFuser)
+        public User(string cPFuser, string cPFAlter, string nameUser, string passUser, string emailUser, string telUser, string tipoUser, string firstName, string lastName) : this(cPFuser, cPFAlter)
         {
             NameUser = nameUser;
             PassUser = passUser;
