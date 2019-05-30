@@ -47,8 +47,6 @@
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.NUMBERACCOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPFHOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lDVBANKACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lDV_PEDREIRADataSet = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSet();
             this.txtNumAccAlter = new MetroFramework.Controls.MetroTextBox();
@@ -59,6 +57,8 @@
             this.txtCPFHOLDERparam = new MetroFramework.Controls.MetroTextBox();
             this.lDVACCOUNTUSERTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVACCOUNTUSERTableAdapter();
             this.lDVBANKACCOUNTTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter();
+            this.NUMBERACCOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPFHOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -265,7 +265,6 @@
             this.metroGrid1.AllowUserToAddRows = false;
             this.metroGrid1.AllowUserToDeleteRows = false;
             this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.AutoGenerateColumns = false;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -282,7 +281,6 @@
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NUMBERACCOUNT,
             this.CPFHOLDER});
-            this.metroGrid1.DataSource = this.lDVBANKACCOUNTBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -317,22 +315,6 @@
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
-            // NUMBERACCOUNT
-            // 
-            this.NUMBERACCOUNT.DataPropertyName = "NUMBERACCOUNT";
-            this.NUMBERACCOUNT.HeaderText = "Número da conta";
-            this.NUMBERACCOUNT.Name = "NUMBERACCOUNT";
-            this.NUMBERACCOUNT.ReadOnly = true;
-            this.NUMBERACCOUNT.Width = 190;
-            // 
-            // CPFHOLDER
-            // 
-            this.CPFHOLDER.DataPropertyName = "CPFHOLDER";
-            this.CPFHOLDER.HeaderText = "CPFHOLDER";
-            this.CPFHOLDER.Name = "CPFHOLDER";
-            this.CPFHOLDER.ReadOnly = true;
-            this.CPFHOLDER.Visible = false;
-            // 
             // lDVBANKACCOUNTBindingSource
             // 
             this.lDVBANKACCOUNTBindingSource.DataMember = "LDVBANKACCOUNT";
@@ -358,6 +340,7 @@
             this.txtNumAccAlter.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNumAccAlter.CustomButton.UseSelectable = true;
             this.txtNumAccAlter.CustomButton.Visible = false;
+            this.txtNumAccAlter.Enabled = false;
             this.txtNumAccAlter.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtNumAccAlter.Lines = new string[0];
             this.txtNumAccAlter.Location = new System.Drawing.Point(456, 42);
@@ -476,6 +459,7 @@
             this.txtCPFHOLDERparam.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCPFHOLDERparam.CustomButton.UseSelectable = true;
             this.txtCPFHOLDERparam.CustomButton.Visible = false;
+            this.txtCPFHOLDERparam.Enabled = false;
             this.txtCPFHOLDERparam.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtCPFHOLDERparam.Lines = new string[0];
             this.txtCPFHOLDERparam.Location = new System.Drawing.Point(365, 42);
@@ -493,6 +477,7 @@
             this.txtCPFHOLDERparam.TabIndex = 14;
             this.metroToolTip1.SetToolTip(this.txtCPFHOLDERparam, "Aqui você insere o número da conta\r\nque deseja cadastrar.");
             this.txtCPFHOLDERparam.UseSelectable = true;
+            this.txtCPFHOLDERparam.Visible = false;
             this.txtCPFHOLDERparam.WaterMark = "Ex: 21.877-2";
             this.txtCPFHOLDERparam.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCPFHOLDERparam.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -505,10 +490,26 @@
             // 
             this.lDVBANKACCOUNTTableAdapter.ClearBeforeFill = true;
             // 
+            // NUMBERACCOUNT
+            // 
+            this.NUMBERACCOUNT.DataPropertyName = "NUMBERACCOUNT";
+            this.NUMBERACCOUNT.HeaderText = "Número da conta";
+            this.NUMBERACCOUNT.Name = "NUMBERACCOUNT";
+            this.NUMBERACCOUNT.ReadOnly = true;
+            this.NUMBERACCOUNT.Width = 190;
+            // 
+            // CPFHOLDER
+            // 
+            this.CPFHOLDER.DataPropertyName = "CPFUSER";
+            this.CPFHOLDER.HeaderText = "CPFHOLDER";
+            this.CPFHOLDER.Name = "CPFHOLDER";
+            this.CPFHOLDER.ReadOnly = true;
+            this.CPFHOLDER.Visible = false;
+            // 
             // frmConfigAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1004, 601);
+            this.ClientSize = new System.Drawing.Size(1004, 460);
             this.Controls.Add(this.txtCPFHOLDERparam);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtNumAccAlter);
@@ -557,8 +558,8 @@
         private LDV_PEDREIRADataSetTableAdapters.LDVACCOUNTUSERTableAdapter lDVACCOUNTUSERTableAdapter;
         private System.Windows.Forms.BindingSource lDVBANKACCOUNTBindingSource;
         private LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter lDVBANKACCOUNTTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPFUSER;
         private System.Windows.Forms.DataGridViewTextBoxColumn NUMBERACCOUNT;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPFHOLDER;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPFUSER;
     }
 }

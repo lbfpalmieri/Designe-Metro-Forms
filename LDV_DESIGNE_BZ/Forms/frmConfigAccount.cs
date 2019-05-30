@@ -11,13 +11,15 @@ namespace LDV_DESIGNE_BZ.Forms
             InitializeComponent();
         }
 
+        #region Load()
         private void frmConfigAccount_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'lDV_PEDREIRADataSet.LDVBANKACCOUNT'. Você pode movê-la ou removê-la conforme necessário.
-            this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
+            //this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
             // TODO: esta linha de código carrega dados na tabela 'lDV_PEDREIRADataSet.LDVACCOUNTUSER'. Você pode movê-la ou removê-la conforme necessário.
             this.lDVACCOUNTUSERTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVACCOUNTUSER);
         }
+        #endregion
 
         #region Limpar();
         private void Limpar(Control controles)
@@ -66,8 +68,11 @@ namespace LDV_DESIGNE_BZ.Forms
                 //Atribuindo o objeto ao BankStatement
                 bkAccDao.InsertAccount(bAcc);
                 MessageBox.Show("Cadastrado !");
+                //this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
+                BankAccountDAO bkDao = new BankAccountDAO();
+                metroGrid1.DataSource = bkDao.EfetuarConsultaPorCodigo(txtCPFHOLDERparam.Text);
+                this.lDVACCOUNTUSERTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVACCOUNTUSER);
                 Limpar(this);
-                this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
             }
         }
         #endregion
@@ -92,6 +97,7 @@ namespace LDV_DESIGNE_BZ.Forms
         }
         #endregion
 
+        #region Evento para enviar dados do Grid para o TextBox
         private void metroGrid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             /*Melhor solução encontrada para resolver a exception que estava ocorrendo ao clicar
@@ -99,14 +105,19 @@ namespace LDV_DESIGNE_BZ.Forms
             aqui.*/
             try
             {
+                Limpar(this);
                 DataGridViewRow row = this.metroGrid2.Rows[e.RowIndex];
                 txtCPFHOLDERparam.Text = row.Cells["CPFUSER"].Value.ToString();
                 txtCpfHolder.Text = row.Cells["CPFUSER"].Value.ToString();
+
+                BankAccountDAO bkDao = new BankAccountDAO();
+                metroGrid1.DataSource = bkDao.EfetuarConsultaPorCodigo(txtCPFHOLDERparam.Text);
             }
             catch (Exception)
             {
             }
         }
+        #endregion
 
         #region Botão para remover uma conta bancaria do sistema
         private void btnRemove_Click(object sender, EventArgs e)
@@ -127,8 +138,10 @@ namespace LDV_DESIGNE_BZ.Forms
                     //Atribuindo o objeto ao BankStatement
                     bkAccDao.DeleteAccount(bAcc);
                     MessageBox.Show("Removido !");
+                    metroGrid1.DataSource = bkAccDao.EfetuarConsultaPorCodigo(txtCPFHOLDERparam.Text);
+                    this.lDVACCOUNTUSERTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVACCOUNTUSER);
                     Limpar(this);
-                    this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
+                    //this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
                 }
                 else if (result == DialogResult.No)
                 {
@@ -157,6 +170,7 @@ namespace LDV_DESIGNE_BZ.Forms
                     //Atribuindo as informações para a o banco
                     BankAccount bAcc = new BankAccount(txtNumAcc.Text, txtCpfHolder.Text, txtNumAccAlter.Text);
                     BankAccountDAO bkAccDao = new BankAccountDAO();
+  
                     User user = new User(txtCPFHOLDERparam.Text, txtCpfHolder.Text);
                     UserDAO uDal = new UserDAO();
 
@@ -164,10 +178,9 @@ namespace LDV_DESIGNE_BZ.Forms
                     bkAccDao.AlterarAccount(bAcc);
                     uDal.AlterarUser(user);
                     MessageBox.Show("Alterado !");
-                    Limpar(this);
-                    this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
+                    metroGrid1.DataSource = bkAccDao.EfetuarConsultaPorCodigo(txtCPFHOLDERparam.Text);
                     this.lDVACCOUNTUSERTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVACCOUNTUSER);
-
+                    Limpar(this);
                 }
                 else if (result == DialogResult.No)
                 {

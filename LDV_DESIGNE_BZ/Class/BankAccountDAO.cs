@@ -59,5 +59,24 @@ namespace LDV_DESIGNE_BZ.Class
             return false;
         }
         #endregion
+
+        #region Retorna um DataTable
+        public DataTable EfetuarConsultaPorCodigo(string cpf)
+        {
+            // Limpando parãmetros existentes
+            query.LimparParametros();
+            string SQL = @" SELECT 
+	                        CPFUSER,
+	                        NUMBERACCOUNT
+                        FROM LDVACCOUNTUSER AU
+                        INNER JOIN LDVBANKACCOUNT BA
+                        ON CPFHOLDER = CPFUSER
+                        WHERE CPFUSER = @CPFUSER ";
+            // Adicionando o parâmetro para filtrar pelo código
+            query.AdicionarParametro("@CPFUSER", SqlDbType.VarChar, cpf);
+            // Retorna um DataTable com os dados da consulta
+            return query.ExecutaConsulta(SQL);
+        }
+        #endregion
     }
 }
