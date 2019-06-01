@@ -2,18 +2,18 @@
 
 namespace LDV_DESIGNE_BZ.Class
 {
-    class Bank
+    class BankStatement
     {
         public decimal ValueStatement { get; set; }
         public DateTime DateStatement { get; set; }
         public string DescStatement { get; set; }
         public string NumberAccountBank { get; set; }
 
-        public Bank()
+        public BankStatement()
         {
         }
 
-        public Bank(decimal value, DateTime date, string desc, string number)
+        public BankStatement(decimal value, DateTime date, string desc, string number)
         {
             ValueStatement = value;
             DateStatement = date;

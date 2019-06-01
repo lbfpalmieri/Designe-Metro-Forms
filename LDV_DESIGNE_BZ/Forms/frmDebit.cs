@@ -2,13 +2,14 @@
 using System.Linq;
 using System.Windows.Forms;
 using LDV_DESIGNE_BZ.Class;
+using MetroFramework.Forms;
 
 namespace LDV_DESIGNE_BZ.Forms
 {
-    public partial class frmDebit : MetroFramework.Forms.MetroForm
+    public partial class frmDebit : MetroForm
     {
-        BankDAO bkDao = new BankDAO();
-        Bank b = new Bank();
+        BankStatementDAO bkDao = new BankStatementDAO();
+        BankStatement b = new BankStatement();
 
         public frmDebit()
         {
@@ -120,7 +121,7 @@ namespace LDV_DESIGNE_BZ.Forms
                 txtSetValue.Text = lblNegative.Text + txtValue.Text;
 
                 //Atribuindo as informações para a o banco
-                Bank b = new Bank(Convert.ToDecimal(txtSetValue.Text), Convert.ToDateTime(txtData.Text), txtDesc.Text, txtNumAccount.Text);
+                BankStatement b = new BankStatement(Convert.ToDecimal(txtSetValue.Text), Convert.ToDateTime(txtData.Text), txtDesc.Text, txtNumAccount.Text);
 
                 //Atribuindo o objeto ao BankStatement
                 bkDao.DepositBankStatement(b);

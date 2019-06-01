@@ -154,7 +154,7 @@ namespace LDV_DESIGNE_BZ.Forms
         #region Alterando um conta bancaria no sistema
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (txtNumAcc.Text == string.Empty || txtCpfHolder.Text == string.Empty)
+            if (txtNumAcc.Text == string.Empty && txtCpfHolder.Text == string.Empty)
             {
                 MessageBox.Show("Favor preencher todos os campos para evitar erros.\nCaso o erro persista entre em contato com o suporte.", "Erro, algo não está preenchido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

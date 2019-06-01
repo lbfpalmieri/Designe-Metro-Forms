@@ -83,6 +83,16 @@ namespace LDV_DESIGNE_BZ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap atualizar30 {
+            get {
+                object obj = ResourceManager.GetObject("atualizar30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Balance {
             get {
                 object obj = ResourceManager.GetObject("Balance", resourceCulture);

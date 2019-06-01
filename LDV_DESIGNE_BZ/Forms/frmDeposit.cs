@@ -6,10 +6,10 @@ using MetroFramework.Forms;
 
 namespace LDV_DESIGNE_BZ.Forms
 {
-    public partial class frmDeposit : MetroFramework.Forms.MetroForm
+    public partial class frmDeposit : MetroForm
     {
-        BankDAO bkDao = new BankDAO();
-        Bank b = new Bank();
+        BankStatementDAO bkDao = new BankStatementDAO();
+        BankStatement b = new BankStatement();
 
         public frmDeposit()
         {
@@ -117,7 +117,7 @@ namespace LDV_DESIGNE_BZ.Forms
                 txtSetValue.Text = lblPositive.Text + txtValue.Text;
 
                 //Atribuindo as informações para a o banco
-                Bank b = new Bank(Convert.ToDecimal(txtSetValue.Text), Convert.ToDateTime(txtData.Text), txtDesc.Text, txtNumAccount.Text);
+                BankStatement b = new BankStatement(Convert.ToDecimal(txtSetValue.Text), Convert.ToDateTime(txtData.Text), txtDesc.Text, txtNumAccount.Text);
 
                 //Atribuindo o objeto ao BankStatement
                 bkDao.DepositBankStatement(b);

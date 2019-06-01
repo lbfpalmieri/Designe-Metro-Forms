@@ -47,26 +47,26 @@
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.lDVBANKACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lDV_PEDREIRADataSet = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSet();
+            this.NUMBERACCOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPFHOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNumAccAlter = new MetroFramework.Controls.MetroTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.CPFUSER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lDVACCOUNTUSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lDV_PEDREIRADataSet = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSet();
             this.txtCPFHOLDERparam = new MetroFramework.Controls.MetroTextBox();
+            this.lDVBANKACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lDVACCOUNTUSERTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVACCOUNTUSERTableAdapter();
             this.lDVBANKACCOUNTTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter();
-            this.NUMBERACCOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPFHOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lDVACCOUNTUSERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNumAcc
@@ -84,7 +84,7 @@
             this.txtNumAcc.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtNumAcc.CustomButton.UseSelectable = true;
             this.txtNumAcc.CustomButton.Visible = false;
-            this.txtNumAcc.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtNumAcc.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtNumAcc.Lines = new string[0];
             this.txtNumAcc.Location = new System.Drawing.Point(48, 77);
             this.txtNumAcc.Margin = new System.Windows.Forms.Padding(4);
@@ -103,25 +103,27 @@
             this.txtNumAcc.UseSelectable = true;
             this.txtNumAcc.WaterMark = "Ex: 21.877-2";
             this.txtNumAcc.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNumAcc.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumAcc.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(48, 50);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(118, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(152, 25);
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Número da conta";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.Location = new System.Drawing.Point(48, 118);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(71, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(93, 25);
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "CPF titular";
             // 
@@ -140,7 +142,7 @@
             this.txtCpfHolder.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCpfHolder.CustomButton.UseSelectable = true;
             this.txtCpfHolder.CustomButton.Visible = false;
-            this.txtCpfHolder.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtCpfHolder.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtCpfHolder.Lines = new string[0];
             this.txtCpfHolder.Location = new System.Drawing.Point(48, 145);
             this.txtCpfHolder.Margin = new System.Windows.Forms.Padding(4);
@@ -159,7 +161,7 @@
             this.txtCpfHolder.UseSelectable = true;
             this.txtCpfHolder.WaterMark = "Ex: 445.751.918/92";
             this.txtCpfHolder.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCpfHolder.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpfHolder.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // groupBox1
             // 
@@ -171,7 +173,8 @@
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.txtCpfHolder);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(712, 77);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(657, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 349);
             this.groupBox1.TabIndex = 10;
@@ -188,10 +191,10 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.edit30;
-            this.btnEdit.Location = new System.Drawing.Point(27, 288);
+            this.btnEdit.Location = new System.Drawing.Point(18, 288);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(212, 41);
+            this.btnEdit.Size = new System.Drawing.Size(232, 41);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Alterar uma conta";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -209,10 +212,10 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Image = global::LDV_DESIGNE_BZ.Properties.Resources.remove30;
-            this.btnRemove.Location = new System.Drawing.Point(27, 239);
+            this.btnRemove.Location = new System.Drawing.Point(18, 239);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(212, 41);
+            this.btnRemove.Size = new System.Drawing.Size(232, 41);
             this.btnRemove.TabIndex = 10;
             this.btnRemove.Text = "Remover uma conta";
             this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -230,10 +233,10 @@
             this.btnAddAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAccount.Image = global::LDV_DESIGNE_BZ.Properties.Resources.add30;
-            this.btnAddAccount.Location = new System.Drawing.Point(27, 190);
+            this.btnAddAccount.Location = new System.Drawing.Point(18, 190);
             this.btnAddAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAccount.Name = "btnAddAccount";
-            this.btnAddAccount.Size = new System.Drawing.Size(212, 41);
+            this.btnAddAccount.Size = new System.Drawing.Size(232, 41);
             this.btnAddAccount.TabIndex = 9;
             this.btnAddAccount.Text = "Adicionar uma conta";
             this.btnAddAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -252,12 +255,13 @@
             // 
             this.groupBox2.Controls.Add(this.metroGrid1);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(365, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(245, 349);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Contas já cadastradas";
+            this.groupBox2.Text = "Contas vinculadas";
             this.metroToolTip1.SetToolTip(this.groupBox2, "Aqui se encontram as contas\r\nque ja estão cadastradas no \r\nsistema.");
             // 
             // metroGrid1
@@ -315,15 +319,21 @@
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
-            // lDVBANKACCOUNTBindingSource
+            // NUMBERACCOUNT
             // 
-            this.lDVBANKACCOUNTBindingSource.DataMember = "LDVBANKACCOUNT";
-            this.lDVBANKACCOUNTBindingSource.DataSource = this.lDV_PEDREIRADataSet;
+            this.NUMBERACCOUNT.DataPropertyName = "NUMBERACCOUNT";
+            this.NUMBERACCOUNT.HeaderText = "Número da conta";
+            this.NUMBERACCOUNT.Name = "NUMBERACCOUNT";
+            this.NUMBERACCOUNT.ReadOnly = true;
+            this.NUMBERACCOUNT.Width = 190;
             // 
-            // lDV_PEDREIRADataSet
+            // CPFHOLDER
             // 
-            this.lDV_PEDREIRADataSet.DataSetName = "LDV_PEDREIRADataSet";
-            this.lDV_PEDREIRADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.CPFHOLDER.DataPropertyName = "CPFUSER";
+            this.CPFHOLDER.HeaderText = "CPFHOLDER";
+            this.CPFHOLDER.Name = "CPFHOLDER";
+            this.CPFHOLDER.ReadOnly = true;
+            this.CPFHOLDER.Visible = false;
             // 
             // txtNumAccAlter
             // 
@@ -367,12 +377,13 @@
             // 
             this.groupBox3.Controls.Add(this.metroGrid2);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(23, 77);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(262, 349);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Contas já cadastradas";
+            this.groupBox3.Text = "CPF existente no sistema";
             this.metroToolTip1.SetToolTip(this.groupBox3, "Aqui se encontram as contas\r\nque ja estão cadastradas no \r\nsistema.");
             // 
             // metroGrid2
@@ -444,6 +455,11 @@
             this.lDVACCOUNTUSERBindingSource.DataMember = "LDVACCOUNTUSER";
             this.lDVACCOUNTUSERBindingSource.DataSource = this.lDV_PEDREIRADataSet;
             // 
+            // lDV_PEDREIRADataSet
+            // 
+            this.lDV_PEDREIRADataSet.DataSetName = "LDV_PEDREIRADataSet";
+            this.lDV_PEDREIRADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtCPFHOLDERparam
             // 
             // 
@@ -482,6 +498,11 @@
             this.txtCPFHOLDERparam.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCPFHOLDERparam.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // lDVBANKACCOUNTBindingSource
+            // 
+            this.lDVBANKACCOUNTBindingSource.DataMember = "LDVBANKACCOUNT";
+            this.lDVBANKACCOUNTBindingSource.DataSource = this.lDV_PEDREIRADataSet;
+            // 
             // lDVACCOUNTUSERTableAdapter
             // 
             this.lDVACCOUNTUSERTableAdapter.ClearBeforeFill = true;
@@ -490,26 +511,10 @@
             // 
             this.lDVBANKACCOUNTTableAdapter.ClearBeforeFill = true;
             // 
-            // NUMBERACCOUNT
-            // 
-            this.NUMBERACCOUNT.DataPropertyName = "NUMBERACCOUNT";
-            this.NUMBERACCOUNT.HeaderText = "Número da conta";
-            this.NUMBERACCOUNT.Name = "NUMBERACCOUNT";
-            this.NUMBERACCOUNT.ReadOnly = true;
-            this.NUMBERACCOUNT.Width = 190;
-            // 
-            // CPFHOLDER
-            // 
-            this.CPFHOLDER.DataPropertyName = "CPFUSER";
-            this.CPFHOLDER.HeaderText = "CPFHOLDER";
-            this.CPFHOLDER.Name = "CPFHOLDER";
-            this.CPFHOLDER.ReadOnly = true;
-            this.CPFHOLDER.Visible = false;
-            // 
             // frmConfigAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1004, 460);
+            this.ClientSize = new System.Drawing.Size(960, 447);
             this.Controls.Add(this.txtCPFHOLDERparam);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtNumAccAlter);
@@ -528,11 +533,11 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lDVACCOUNTUSERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDV_PEDREIRADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lDVBANKACCOUNTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

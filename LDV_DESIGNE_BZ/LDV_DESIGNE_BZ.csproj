@@ -55,10 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Bank.cs" />
+    <Compile Include="Class\BankStatement.cs" />
     <Compile Include="Class\BankAccount.cs" />
     <Compile Include="Class\BankAccountDAO.cs" />
-    <Compile Include="Class\BankDAO.cs" />
+    <Compile Include="Class\BankStatementDAO.cs" />
     <Compile Include="Class\DataAccess.cs" />
     <Compile Include="Class\User.cs" />
     <Compile Include="Class\UserDAO.cs" />
@@ -193,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
