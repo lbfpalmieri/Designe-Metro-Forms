@@ -46,9 +46,12 @@ namespace LDV_DESIGNE_BZ
             }  
         }
 
-        private void btnAllAccounts_Click(object sender, System.EventArgs e)
+        private void btnExtrato_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Em construção", "ALERTA !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            using (frmSelectAccount selectAccount = new frmSelectAccount())
+            {
+                selectAccount.ShowDialog();
+            }
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)

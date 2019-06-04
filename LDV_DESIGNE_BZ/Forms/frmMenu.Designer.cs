@@ -37,17 +37,17 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAllAccounts = new System.Windows.Forms.Button();
             this.btnUnicAccount = new System.Windows.Forms.Button();
-            this.lblSaldoTotal = new System.Windows.Forms.Label();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.lblSaldoTotal = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblNumConta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbNumConta = new MetroFramework.Controls.MetroComboBox();
             this.lDVBANKACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lDV_PEDREIRADataSet = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSet();
             this.lDVBANKACCOUNTTableAdapter = new LDV_DESIGNE_BZ.LDV_PEDREIRADataSetTableAdapters.LDVBANKACCOUNTTableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNumContaNegativo = new System.Windows.Forms.Label();
@@ -145,16 +145,16 @@
             this.btnAllAccounts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnAllAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAllAccounts.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllAccounts.Image = global::LDV_DESIGNE_BZ.Properties.Resources.Search;
+            this.btnAllAccounts.Image = global::LDV_DESIGNE_BZ.Properties.Resources.OneStracts;
             this.btnAllAccounts.Location = new System.Drawing.Point(182, 29);
             this.btnAllAccounts.Name = "btnAllAccounts";
             this.btnAllAccounts.Size = new System.Drawing.Size(176, 135);
             this.btnAllAccounts.TabIndex = 2;
-            this.btnAllAccounts.Text = "Pesquisar conta(s)";
+            this.btnAllAccounts.Text = "Extrato";
             this.btnAllAccounts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.metroToolTip1.SetToolTip(this.btnAllAccounts, "Click para ver o saldo de \r\ntodas as contas bancárias.");
             this.btnAllAccounts.UseVisualStyleBackColor = true;
-            this.btnAllAccounts.Click += new System.EventHandler(this.btnAllAccounts_Click);
+            this.btnAllAccounts.Click += new System.EventHandler(this.btnExtrato_Click);
             // 
             // btnUnicAccount
             // 
@@ -174,17 +174,6 @@
             this.btnUnicAccount.UseVisualStyleBackColor = true;
             this.btnUnicAccount.Click += new System.EventHandler(this.btnUnicAccount_Click);
             // 
-            // lblSaldoTotal
-            // 
-            this.lblSaldoTotal.AutoSize = true;
-            this.lblSaldoTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSaldoTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldoTotal.ForeColor = System.Drawing.Color.White;
-            this.lblSaldoTotal.Location = new System.Drawing.Point(278, 61);
-            this.lblSaldoTotal.Name = "lblSaldoTotal";
-            this.lblSaldoTotal.Size = new System.Drawing.Size(0, 38);
-            this.lblSaldoTotal.TabIndex = 6;
-            // 
             // btnAtualizar
             // 
             this.btnAtualizar.FlatAppearance.BorderSize = 0;
@@ -201,6 +190,17 @@
             this.metroToolTip1.SetToolTip(this.btnAtualizar, "Click aqui para atualizar os valores.");
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // lblSaldoTotal
+            // 
+            this.lblSaldoTotal.AutoSize = true;
+            this.lblSaldoTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSaldoTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldoTotal.ForeColor = System.Drawing.Color.White;
+            this.lblSaldoTotal.Location = new System.Drawing.Point(278, 61);
+            this.lblSaldoTotal.Name = "lblSaldoTotal";
+            this.lblSaldoTotal.Size = new System.Drawing.Size(0, 38);
+            this.lblSaldoTotal.TabIndex = 6;
             // 
             // pictureBox1
             // 
@@ -224,6 +224,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(506, 111);
             this.panel1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(228, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 38);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "R$";
             // 
             // lblNumConta
             // 
@@ -278,18 +290,6 @@
             // lDVBANKACCOUNTTableAdapter
             // 
             this.lDVBANKACCOUNTTableAdapter.ClearBeforeFill = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(228, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 38);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "R$";
             // 
             // panel2
             // 
