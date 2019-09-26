@@ -9,51 +9,31 @@ namespace LDV_DESIGNE_BZ.Class
         User u = new User();
         DataAccess query = new DataAccess();
 
-        //arrumar pq ta errado
         #region AddUser()
-        public void AddUser(string cpfUser, string nameUser, string passUser, string emailUser, string telUser, string tipoUser, string firstName, string lastName)
+        public bool AddUser(User user)
         {
-            u.CPFuser = cpfUser;
-            u.NameUser = nameUser;
-            u.PassUser = passUser;
-            u.EmailUser = emailUser;
-            u.TelUser = telUser;
-            u.TipoUser = tipoUser;
-            u.FirstName = firstName;
-            u.LastName = lastName;
+            query.LimparParametros();
+            string SQL = @"INSERT INTO LDVACCOUNTUSER
+                          (CPFUSER, NAMEUSER, PASSUSER, EMAILUSER, TELUSER, TIPOUSER, FIRSTNAME, LASTNAME)
+                          VALUES
+                          (@CPFUSER, @NAMEUSER, @PASSUSER, @EMAILUSER, @TELUSER, @TIPOUSER, @FIRSTNAME, @LASTNAME)";
 
-            SqlCommand addUser = new SqlCommand();
-            addUser.Connection = DataAccess.connection();
+            query.AdicionarParametro("@CPFUSER", SqlDbType.VarChar, user.CPFuser);
+            query.AdicionarParametro("@NAMEUSER", SqlDbType.VarChar, user.NameUser);
+            query.AdicionarParametro("@PASSUSER", SqlDbType.VarChar, user.PassUser);
+            query.AdicionarParametro("@EMAILUSER", SqlDbType.VarChar, user.EmailUser);
+            query.AdicionarParametro("@TELUSER", SqlDbType.VarChar, user.TelUser);
+            query.AdicionarParametro("@TIPOUSER", SqlDbType.VarChar, user.TipoUser);
+            query.AdicionarParametro("@FIRSTNAME", SqlDbType.VarChar, user.FirstName);
+            query.AdicionarParametro("@LASTNAME", SqlDbType.VarChar, user.LastName);
 
-            addUser.CommandText = "INSERT INTO LDVACCOUNTUSER " +
-                                  "(CPFUSER, NAMEUSER, PASSUSER, EMAILUSER, TELUSER, TIPOUSER, FIRSTNAME, LASTNAME) " +
-                                  "VALUES " +
-                                  "(@CPFUSER, @NAMEUSER, @PASSUSER, @EMAILUSER, @TELUSER, @TIPOUSER, @FIRSTNAME, @LASTNAME)";
-            try
-            {
-                addUser.Parameters.Add(new SqlParameter("@CPFUSER", u.CPFuser));
-                addUser.Parameters.Add(new SqlParameter("@NAMEUSER", u.NameUser));
-                addUser.Parameters.Add(new SqlParameter("@PASSUSER", u.PassUser));
-                addUser.Parameters.Add(new SqlParameter("@EMAILUSER", u.EmailUser));
-                addUser.Parameters.Add(new SqlParameter("@TELUSER", u.TelUser));
-                addUser.Parameters.Add(new SqlParameter("@TIPOUSER", u.TipoUser));
-                addUser.Parameters.Add(new SqlParameter("@FIRSTNAME", u.FirstName));
-                addUser.Parameters.Add(new SqlParameter("@LASTNAME", u.LastName));
-
-                addUser.ExecuteNonQuery();
-                addUser.Connection.Close();
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            //Retorna a quantidade de linhas afetadas
+            return (query.ExecutaAtualizacao(SQL) > 0);
         }
         #endregion
 
         #region AlterAccount
-        public bool AlterarUser(User User)
+        public bool AlterarUser(User user)
         {
             // Limpando os parâmetros
             query.LimparParametros();
@@ -61,8 +41,8 @@ namespace LDV_DESIGNE_BZ.Class
                             CPFUSER = @CPFUSER
                             WHERE CPFUSER = @CPFUSER1";
             // Adicionando novos parâmetros
-            query.AdicionarParametro("@CPFUSER1", SqlDbType.VarChar, User.CPFuser);
-            query.AdicionarParametro("@CPFUSER", SqlDbType.VarChar, User.CPFAlter);
+            query.AdicionarParametro("@CPFUSER1", SqlDbType.VarChar, user.CPFuser);
+            query.AdicionarParametro("@CPFUSER", SqlDbType.VarChar, user.CPFAlter);
             // Executando a atualização na base verificando se o update executou com sucesso
             if (query.ExecutaAtualizacao(SQL) > 0)
                 return true;
