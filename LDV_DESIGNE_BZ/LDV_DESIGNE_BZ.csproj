@@ -98,6 +98,18 @@
     <Compile Include="Forms\frmDeposit.Designer.cs">
       <DependentUpon>frmDeposit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmEsqueceuSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEsqueceuSenha.Designer.cs">
+      <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,12 @@
     </Compile>
     <Compile Include="Forms\frmSelectAccount.Designer.cs">
       <DependentUpon>frmSelectAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSuporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSuporte.Designer.cs">
+      <DependentUpon>frmSuporte.cs</DependentUpon>
     </Compile>
     <Compile Include="LDV_PEDREIRADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -132,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDeposit.resx">
       <DependentUpon>frmDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
