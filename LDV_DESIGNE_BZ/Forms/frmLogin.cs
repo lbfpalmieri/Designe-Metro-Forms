@@ -17,5 +17,39 @@ namespace LDV_DESIGNE_BZ.Forms
         {
             InitializeComponent();
         }
+
+        private void btnEfetuarLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Hide();
+                using (frmMenu menu = new frmMenu())
+                {
+                    menu.ShowDialog();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+            }
+        }
+
+        private void btnSuporte_Click(object sender, EventArgs e)
+        {
+            using (frmSuporte sup = new frmSuporte())
+            {
+                sup.ShowDialog();
+            }
+        }
+
+        private void btnEsqSenha_Click(object sender, EventArgs e)
+        {
+            using (frmEsqueceuSenha es = new frmEsqueceuSenha())
+            {
+                es.ShowDialog();
+            }
+        }
     }
 }

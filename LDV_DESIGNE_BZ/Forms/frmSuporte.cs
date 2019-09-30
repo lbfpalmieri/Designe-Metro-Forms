@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace LDV_DESIGNE_BZ.Forms
 {
-    public partial class frmSuporte : Form
+    public partial class frmSuporte : MetroForm
     {
         public frmSuporte()
         {
             InitializeComponent();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

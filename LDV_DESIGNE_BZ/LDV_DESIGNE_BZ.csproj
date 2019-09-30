@@ -151,6 +151,9 @@
     <EmbeddedResource Include="Forms\frmDeposit.resx">
       <DependentUpon>frmDeposit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEsqueceuSenha.resx">
+      <DependentUpon>frmEsqueceuSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSelectAccount.resx">
       <DependentUpon>frmSelectAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSuporte.resx">
+      <DependentUpon>frmSuporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

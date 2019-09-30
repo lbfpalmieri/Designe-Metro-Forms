@@ -59,9 +59,9 @@
             // 
             // 
             this.txtValue.CustomButton.Image = null;
-            this.txtValue.CustomButton.Location = new System.Drawing.Point(81, 1);
+            this.txtValue.CustomButton.Location = new System.Drawing.Point(240, 1);
             this.txtValue.CustomButton.Name = "";
-            this.txtValue.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtValue.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtValue.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtValue.CustomButton.TabIndex = 1;
             this.txtValue.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -79,7 +79,7 @@
             this.txtValue.SelectionLength = 0;
             this.txtValue.SelectionStart = 0;
             this.txtValue.ShortcutsEnabled = true;
-            this.txtValue.Size = new System.Drawing.Size(130, 23);
+            this.txtValue.Size = new System.Drawing.Size(262, 23);
             this.txtValue.TabIndex = 0;
             this.metroToolTip1.SetToolTip(this.txtValue, "Digite aqui o valor \r\nque deseja debitar.");
             this.txtValue.UseSelectable = true;
@@ -94,7 +94,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 146);
+            this.metroLabel1.Location = new System.Drawing.Point(6, 150);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(136, 25);
             this.metroLabel1.TabIndex = 1;
@@ -109,10 +109,10 @@
             this.txtData.Enabled = false;
             this.txtData.FontSize = MetroFramework.MetroDateTimeSize.Tall;
             this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtData.Location = new System.Drawing.Point(161, 239);
+            this.txtData.Location = new System.Drawing.Point(165, 239);
             this.txtData.MinimumSize = new System.Drawing.Size(0, 35);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(134, 35);
+            this.txtData.Size = new System.Drawing.Size(262, 35);
             this.txtData.TabIndex = 2;
             this.metroToolTip1.SetToolTip(this.txtData, "Esse campo não é modificavel \r\npor quentão de segurança.");
             // 
@@ -122,9 +122,9 @@
             // 
             // 
             this.txtDesc.CustomButton.Image = null;
-            this.txtDesc.CustomButton.Location = new System.Drawing.Point(206, 1);
+            this.txtDesc.CustomButton.Location = new System.Drawing.Point(305, 1);
             this.txtDesc.CustomButton.Name = "";
-            this.txtDesc.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtDesc.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtDesc.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDesc.CustomButton.TabIndex = 1;
             this.txtDesc.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -132,7 +132,7 @@
             this.txtDesc.CustomButton.Visible = false;
             this.txtDesc.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtDesc.Lines = new string[0];
-            this.txtDesc.Location = new System.Drawing.Point(115, 103);
+            this.txtDesc.Location = new System.Drawing.Point(100, 107);
             this.txtDesc.MaxLength = 32767;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.PasswordChar = '\0';
@@ -142,7 +142,7 @@
             this.txtDesc.SelectionLength = 0;
             this.txtDesc.SelectionStart = 0;
             this.txtDesc.ShortcutsEnabled = true;
-            this.txtDesc.Size = new System.Drawing.Size(297, 23);
+            this.txtDesc.Size = new System.Drawing.Size(327, 23);
             this.txtDesc.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.txtDesc, "Digite uma descrição breve sobre o \r\nque você está debitando de sua conta.");
             this.txtDesc.UseSelectable = true;
@@ -155,7 +155,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 103);
+            this.metroLabel2.Location = new System.Drawing.Point(6, 107);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(88, 25);
             this.metroLabel2.TabIndex = 4;
@@ -168,10 +168,10 @@
             this.txtNumAccount.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.txtNumAccount.FormattingEnabled = true;
             this.txtNumAccount.ItemHeight = 29;
-            this.txtNumAccount.Location = new System.Drawing.Point(158, 188);
+            this.txtNumAccount.Location = new System.Drawing.Point(165, 188);
             this.txtNumAccount.Name = "txtNumAccount";
             this.txtNumAccount.PromptText = "Escolha a conta...";
-            this.txtNumAccount.Size = new System.Drawing.Size(138, 35);
+            this.txtNumAccount.Size = new System.Drawing.Size(262, 35);
             this.txtNumAccount.TabIndex = 5;
             this.metroToolTip1.SetToolTip(this.txtNumAccount, "Selecione a conta bancária \r\nque deseja fazer o débito.");
             this.txtNumAccount.UseSelectable = true;
@@ -196,7 +196,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(23, 194);
+            this.metroLabel3.Location = new System.Drawing.Point(6, 198);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(130, 25);
             this.metroLabel3.TabIndex = 6;
@@ -207,7 +207,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(23, 245);
+            this.metroLabel4.Location = new System.Drawing.Point(6, 249);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(135, 25);
             this.metroLabel4.TabIndex = 7;

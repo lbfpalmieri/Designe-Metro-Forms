@@ -53,10 +53,9 @@
             // 
             // txtSetValue
             // 
-            this.txtSetValue.Location = new System.Drawing.Point(508, 10);
-            this.txtSetValue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSetValue.Location = new System.Drawing.Point(381, 8);
             this.txtSetValue.Name = "txtSetValue";
-            this.txtSetValue.Size = new System.Drawing.Size(56, 22);
+            this.txtSetValue.Size = new System.Drawing.Size(43, 20);
             this.txtSetValue.TabIndex = 21;
             this.txtSetValue.Visible = false;
             // 
@@ -64,10 +63,9 @@
             // 
             this.lblPositive.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPositive.AutoSize = true;
-            this.lblPositive.Location = new System.Drawing.Point(484, 10);
-            this.lblPositive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPositive.Location = new System.Drawing.Point(363, 8);
             this.lblPositive.Name = "lblPositive";
-            this.lblPositive.Size = new System.Drawing.Size(16, 17);
+            this.lblPositive.Size = new System.Drawing.Size(13, 13);
             this.lblPositive.TabIndex = 20;
             this.lblPositive.Text = "+";
             this.lblPositive.Visible = false;
@@ -81,10 +79,9 @@
             this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeposit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeposit.Image = global::LDV_DESIGNE_BZ.Properties.Resources.depositALLrz;
-            this.btnDeposit.Location = new System.Drawing.Point(172, 387);
-            this.btnDeposit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeposit.Location = new System.Drawing.Point(129, 314);
             this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(236, 57);
+            this.btnDeposit.Size = new System.Drawing.Size(177, 46);
             this.btnDeposit.TabIndex = 19;
             this.btnDeposit.Text = "Finalizar depósito";
             this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -97,10 +94,9 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(31, 302);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(2, 249);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(144, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(135, 25);
             this.metroLabel4.TabIndex = 18;
             this.metroLabel4.Text = "Data atual/hora";
             // 
@@ -109,10 +105,9 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(31, 239);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(2, 198);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(140, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(130, 25);
             this.metroLabel3.TabIndex = 17;
             this.metroLabel3.Text = "Conta bancária";
             // 
@@ -123,11 +118,10 @@
             this.txtNumAccount.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.txtNumAccount.FormattingEnabled = true;
             this.txtNumAccount.ItemHeight = 29;
-            this.txtNumAccount.Location = new System.Drawing.Point(183, 229);
-            this.txtNumAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumAccount.Location = new System.Drawing.Point(176, 188);
             this.txtNumAccount.Name = "txtNumAccount";
             this.txtNumAccount.PromptText = "Escolha a conta...";
-            this.txtNumAccount.Size = new System.Drawing.Size(182, 35);
+            this.txtNumAccount.Size = new System.Drawing.Size(248, 35);
             this.txtNumAccount.TabIndex = 16;
             this.metroToolTip1.SetToolTip(this.txtNumAccount, "Selecione a conta bancária \r\nque deseja fazer o deposito.");
             this.txtNumAccount.UseSelectable = true;
@@ -148,10 +142,9 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(31, 127);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(2, 107);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(94, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(88, 25);
             this.metroLabel2.TabIndex = 15;
             this.metroLabel2.Text = "Descrição";
             // 
@@ -161,10 +154,9 @@
             // 
             // 
             this.txtDesc.CustomButton.Image = null;
-            this.txtDesc.CustomButton.Location = new System.Drawing.Point(370, 2);
-            this.txtDesc.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDesc.CustomButton.Location = new System.Drawing.Point(295, 1);
             this.txtDesc.CustomButton.Name = "";
-            this.txtDesc.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtDesc.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtDesc.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDesc.CustomButton.TabIndex = 1;
             this.txtDesc.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -172,8 +164,7 @@
             this.txtDesc.CustomButton.Visible = false;
             this.txtDesc.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtDesc.Lines = new string[0];
-            this.txtDesc.Location = new System.Drawing.Point(140, 124);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDesc.Location = new System.Drawing.Point(107, 109);
             this.txtDesc.MaxLength = 32767;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.PasswordChar = '\0';
@@ -183,7 +174,7 @@
             this.txtDesc.SelectionLength = 0;
             this.txtDesc.SelectionStart = 0;
             this.txtDesc.ShortcutsEnabled = true;
-            this.txtDesc.Size = new System.Drawing.Size(396, 28);
+            this.txtDesc.Size = new System.Drawing.Size(317, 23);
             this.txtDesc.TabIndex = 14;
             this.metroToolTip1.SetToolTip(this.txtDesc, "Digite uma descrição breve sobre o \r\nque você está depositando em sua conta.");
             this.txtDesc.UseSelectable = true;
@@ -200,11 +191,10 @@
             this.txtData.Enabled = false;
             this.txtData.FontSize = MetroFramework.MetroDateTimeSize.Tall;
             this.txtData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtData.Location = new System.Drawing.Point(187, 292);
-            this.txtData.Margin = new System.Windows.Forms.Padding(4);
+            this.txtData.Location = new System.Drawing.Point(176, 235);
             this.txtData.MinimumSize = new System.Drawing.Size(0, 35);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(178, 35);
+            this.txtData.Size = new System.Drawing.Size(248, 35);
             this.txtData.TabIndex = 13;
             // 
             // metroLabel1
@@ -212,10 +202,9 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(31, 180);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(2, 150);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(142, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(136, 25);
             this.metroLabel1.TabIndex = 12;
             this.metroLabel1.Text = "Valor do débito";
             // 
@@ -225,10 +214,9 @@
             // 
             // 
             this.txtValue.CustomButton.Image = null;
-            this.txtValue.CustomButton.Location = new System.Drawing.Point(147, 2);
-            this.txtValue.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValue.CustomButton.Location = new System.Drawing.Point(226, 1);
             this.txtValue.CustomButton.Name = "";
-            this.txtValue.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtValue.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtValue.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtValue.CustomButton.TabIndex = 1;
             this.txtValue.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -236,8 +224,7 @@
             this.txtValue.CustomButton.Visible = false;
             this.txtValue.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtValue.Lines = new string[0];
-            this.txtValue.Location = new System.Drawing.Point(192, 177);
-            this.txtValue.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValue.Location = new System.Drawing.Point(176, 146);
             this.txtValue.MaxLength = 32767;
             this.txtValue.Name = "txtValue";
             this.txtValue.PasswordChar = '\0';
@@ -247,7 +234,7 @@
             this.txtValue.SelectionLength = 0;
             this.txtValue.SelectionStart = 0;
             this.txtValue.ShortcutsEnabled = true;
-            this.txtValue.Size = new System.Drawing.Size(173, 28);
+            this.txtValue.Size = new System.Drawing.Size(248, 23);
             this.txtValue.TabIndex = 11;
             this.metroToolTip1.SetToolTip(this.txtValue, "Digite aqui o valor \r\nque deseja depositar.");
             this.txtValue.UseSelectable = true;
@@ -269,9 +256,9 @@
             // 
             // frmDeposit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 490);
+            this.ClientSize = new System.Drawing.Size(435, 398);
             this.Controls.Add(this.txtSetValue);
             this.Controls.Add(this.lblPositive);
             this.Controls.Add(this.btnDeposit);
@@ -284,11 +271,9 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txtValue);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDeposit";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowInTaskbar = false;

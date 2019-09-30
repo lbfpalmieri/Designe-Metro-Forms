@@ -72,5 +72,14 @@ namespace LDV_DESIGNE_BZ
         {
             this.lDVBANKACCOUNTTableAdapter.Fill(this.lDV_PEDREIRADataSet.LDVBANKACCOUNT);
         }
+
+        private void btnDeslogar_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (frmLogin flogin = new frmLogin())
+            {
+                flogin.ShowDialog();
+            }
+        }
     }
 }

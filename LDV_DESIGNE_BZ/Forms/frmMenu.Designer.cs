@@ -58,6 +58,7 @@
             this.lblNumContaPositivo = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblValorDeposito = new System.Windows.Forms.Label();
+            this.btnDeslogar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -199,7 +200,7 @@
             this.lblSaldoTotal.ForeColor = System.Drawing.Color.White;
             this.lblSaldoTotal.Location = new System.Drawing.Point(278, 61);
             this.lblSaldoTotal.Name = "lblSaldoTotal";
-            this.lblSaldoTotal.Size = new System.Drawing.Size(0, 38);
+            this.lblSaldoTotal.Size = new System.Drawing.Size(0, 30);
             this.lblSaldoTotal.TabIndex = 6;
             // 
             // pictureBox1
@@ -233,7 +234,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(228, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 38);
+            this.label2.Size = new System.Drawing.Size(39, 30);
             this.label2.TabIndex = 7;
             this.label2.Text = "R$";
             // 
@@ -244,7 +245,7 @@
             this.lblNumConta.ForeColor = System.Drawing.Color.White;
             this.lblNumConta.Location = new System.Drawing.Point(201, 3);
             this.lblNumConta.Name = "lblNumConta";
-            this.lblNumConta.Size = new System.Drawing.Size(0, 28);
+            this.lblNumConta.Size = new System.Drawing.Size(0, 21);
             this.lblNumConta.TabIndex = 1;
             // 
             // label1
@@ -254,7 +255,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 28);
+            this.label1.Size = new System.Drawing.Size(160, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Saldo total da conta:";
             // 
@@ -311,7 +312,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(228, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 38);
+            this.label3.Size = new System.Drawing.Size(39, 30);
             this.label3.TabIndex = 7;
             this.label3.Text = "R$";
             // 
@@ -322,7 +323,7 @@
             this.lblNumContaNegativo.ForeColor = System.Drawing.Color.White;
             this.lblNumContaNegativo.Location = new System.Drawing.Point(247, 3);
             this.lblNumContaNegativo.Name = "lblNumContaNegativo";
-            this.lblNumContaNegativo.Size = new System.Drawing.Size(0, 28);
+            this.lblNumContaNegativo.Size = new System.Drawing.Size(0, 21);
             this.lblNumContaNegativo.TabIndex = 1;
             // 
             // label5
@@ -332,7 +333,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 2);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 28);
+            this.label5.Size = new System.Drawing.Size(192, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Total de débito da conta:";
             // 
@@ -344,7 +345,7 @@
             this.lblValorNegativo.ForeColor = System.Drawing.Color.White;
             this.lblValorNegativo.Location = new System.Drawing.Point(278, 61);
             this.lblValorNegativo.Name = "lblValorNegativo";
-            this.lblValorNegativo.Size = new System.Drawing.Size(0, 38);
+            this.lblValorNegativo.Size = new System.Drawing.Size(0, 30);
             this.lblValorNegativo.TabIndex = 6;
             // 
             // panel3
@@ -367,7 +368,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(228, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 38);
+            this.label4.Size = new System.Drawing.Size(39, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "R$";
             // 
@@ -378,7 +379,7 @@
             this.lblNumContaPositivo.ForeColor = System.Drawing.Color.White;
             this.lblNumContaPositivo.Location = new System.Drawing.Point(262, 2);
             this.lblNumContaPositivo.Name = "lblNumContaPositivo";
-            this.lblNumContaPositivo.Size = new System.Drawing.Size(0, 28);
+            this.lblNumContaPositivo.Size = new System.Drawing.Size(0, 21);
             this.lblNumContaPositivo.TabIndex = 1;
             // 
             // label7
@@ -388,7 +389,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(3, 2);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(259, 28);
+            this.label7.Size = new System.Drawing.Size(209, 21);
             this.label7.TabIndex = 0;
             this.label7.Text = "Total de deposito da conta:";
             // 
@@ -400,13 +401,30 @@
             this.lblValorDeposito.ForeColor = System.Drawing.Color.White;
             this.lblValorDeposito.Location = new System.Drawing.Point(278, 61);
             this.lblValorDeposito.Name = "lblValorDeposito";
-            this.lblValorDeposito.Size = new System.Drawing.Size(0, 38);
+            this.lblValorDeposito.Size = new System.Drawing.Size(0, 30);
             this.lblValorDeposito.TabIndex = 6;
+            // 
+            // btnDeslogar
+            // 
+            this.btnDeslogar.FlatAppearance.BorderSize = 0;
+            this.btnDeslogar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.btnDeslogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeslogar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeslogar.Location = new System.Drawing.Point(122, 13);
+            this.btnDeslogar.Name = "btnDeslogar";
+            this.btnDeslogar.Size = new System.Drawing.Size(180, 51);
+            this.btnDeslogar.TabIndex = 11;
+            this.btnDeslogar.Text = "Deslogar";
+            this.btnDeslogar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.metroToolTip1.SetToolTip(this.btnDeslogar, "Deslogar");
+            this.btnDeslogar.UseVisualStyleBackColor = true;
+            this.btnDeslogar.Click += new System.EventHandler(this.btnDeslogar_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(992, 619);
+            this.Controls.Add(this.btnDeslogar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cbNumConta);
@@ -466,6 +484,7 @@
         private System.Windows.Forms.Label lblNumContaPositivo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblValorDeposito;
+        private System.Windows.Forms.Button btnDeslogar;
     }
 }
 

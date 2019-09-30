@@ -33,9 +33,9 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtNumAcc = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.btnAddAccount = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEfetuarLogin = new System.Windows.Forms.Button();
+            this.btnSuporte = new System.Windows.Forms.Button();
+            this.btnEsqSenha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -130,65 +130,68 @@
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btnAddAccount
+            // btnEfetuarLogin
             // 
-            this.btnAddAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAccount.FlatAppearance.BorderSize = 0;
-            this.btnAddAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAccount.Location = new System.Drawing.Point(95, 251);
-            this.btnAddAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddAccount.Name = "btnAddAccount";
-            this.btnAddAccount.Size = new System.Drawing.Size(244, 41);
-            this.btnAddAccount.TabIndex = 10;
-            this.btnAddAccount.Text = "Efetuar login";
-            this.btnAddAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddAccount.UseVisualStyleBackColor = true;
+            this.btnEfetuarLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEfetuarLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEfetuarLogin.FlatAppearance.BorderSize = 0;
+            this.btnEfetuarLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEfetuarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEfetuarLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEfetuarLogin.Location = new System.Drawing.Point(95, 251);
+            this.btnEfetuarLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEfetuarLogin.Name = "btnEfetuarLogin";
+            this.btnEfetuarLogin.Size = new System.Drawing.Size(244, 41);
+            this.btnEfetuarLogin.TabIndex = 10;
+            this.btnEfetuarLogin.Text = "Efetuar login";
+            this.btnEfetuarLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEfetuarLogin.UseVisualStyleBackColor = true;
+            this.btnEfetuarLogin.Click += new System.EventHandler(this.btnEfetuarLogin_Click);
             // 
-            // button1
+            // btnSuporte
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(10, 350);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 41);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Suporte";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSuporte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSuporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuporte.FlatAppearance.BorderSize = 0;
+            this.btnSuporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSuporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuporte.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuporte.Location = new System.Drawing.Point(10, 350);
+            this.btnSuporte.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuporte.Name = "btnSuporte";
+            this.btnSuporte.Size = new System.Drawing.Size(148, 41);
+            this.btnSuporte.TabIndex = 11;
+            this.btnSuporte.Text = "Suporte";
+            this.btnSuporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSuporte.UseVisualStyleBackColor = true;
+            this.btnSuporte.Click += new System.EventHandler(this.btnSuporte_Click);
             // 
-            // button2
+            // btnEsqSenha
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(166, 350);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(284, 41);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Esqueci minha senha, e agora?";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEsqSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEsqSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEsqSenha.FlatAppearance.BorderSize = 0;
+            this.btnEsqSenha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEsqSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEsqSenha.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEsqSenha.Location = new System.Drawing.Point(166, 350);
+            this.btnEsqSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEsqSenha.Name = "btnEsqSenha";
+            this.btnEsqSenha.Size = new System.Drawing.Size(284, 41);
+            this.btnEsqSenha.TabIndex = 12;
+            this.btnEsqSenha.Text = "Esqueci minha senha, e agora?";
+            this.btnEsqSenha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEsqSenha.UseVisualStyleBackColor = true;
+            this.btnEsqSenha.Click += new System.EventHandler(this.btnEsqSenha_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 403);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAddAccount);
+            this.Controls.Add(this.btnEsqSenha);
+            this.Controls.Add(this.btnSuporte);
+            this.Controls.Add(this.btnEfetuarLogin);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.txtNumAcc);
             this.Controls.Add(this.metroLabel2);
@@ -209,8 +212,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txtNumAcc;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private System.Windows.Forms.Button btnAddAccount;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEfetuarLogin;
+        private System.Windows.Forms.Button btnSuporte;
+        private System.Windows.Forms.Button btnEsqSenha;
     }
 }
