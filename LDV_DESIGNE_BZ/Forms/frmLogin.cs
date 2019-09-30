@@ -51,5 +51,13 @@ namespace LDV_DESIGNE_BZ.Forms
                 es.ShowDialog();
             }
         }
+
+        private void btnCriarConta_Click(object sender, EventArgs e)
+        {
+            using (frmCriarConta cc = new frmCriarConta())
+            {
+                cc.ShowDialog();
+            }
+        }
     }
 }

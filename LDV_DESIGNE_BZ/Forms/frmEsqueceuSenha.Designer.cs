@@ -36,7 +36,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtRepitaSenha = new MetroFramework.Controls.MetroTextBox();
             this.lblRepitaSenha = new MetroFramework.Controls.MetroLabel();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEfetuarLogin
@@ -47,7 +46,7 @@
             this.btnEfetuarLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnEfetuarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEfetuarLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEfetuarLogin.Location = new System.Drawing.Point(235, 309);
+            this.btnEfetuarLogin.Location = new System.Drawing.Point(235, 302);
             this.btnEfetuarLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnEfetuarLogin.Name = "btnEfetuarLogin";
             this.btnEfetuarLogin.Size = new System.Drawing.Size(215, 41);
@@ -200,30 +199,11 @@
             this.lblRepitaSenha.Text = "Repita a senha";
             this.lblRepitaSenha.Visible = false;
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(6, 415);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(137, 34);
-            this.btnVoltar.TabIndex = 18;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // frmEsqueceuSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 456);
-            this.Controls.Add(this.btnVoltar);
+            this.ClientSize = new System.Drawing.Size(685, 442);
             this.Controls.Add(this.txtRepitaSenha);
             this.Controls.Add(this.lblRepitaSenha);
             this.Controls.Add(this.btnEfetuarLogin);
@@ -250,6 +230,5 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txtRepitaSenha;
         private MetroFramework.Controls.MetroLabel lblRepitaSenha;
-        private System.Windows.Forms.Button btnVoltar;
     }
 }

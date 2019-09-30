@@ -186,3 +186,4 @@ C:\Users\T-Gamer\Desktop\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGN
 C:\Users\T-Gamer\Desktop\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.pdb
 C:\Users\T-Gamer\Desktop\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.Forms.frmSuporte.resources
 C:\Users\T-Gamer\Desktop\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.Forms.frmEsqueceuSenha.resources
+C:\Users\T-Gamer\Desktop\Designe-Metro-Forms\LDV_DESIGNE_BZ\obj\Debug\LDV_DESIGNE_BZ.Forms.frmCriarConta.resources

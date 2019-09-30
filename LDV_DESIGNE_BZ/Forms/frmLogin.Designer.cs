@@ -36,6 +36,7 @@
             this.btnEfetuarLogin = new System.Windows.Forms.Button();
             this.btnSuporte = new System.Windows.Forms.Button();
             this.btnEsqSenha = new System.Windows.Forms.Button();
+            this.btnCriarConta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -184,11 +185,30 @@
             this.btnEsqSenha.UseVisualStyleBackColor = true;
             this.btnEsqSenha.Click += new System.EventHandler(this.btnEsqSenha_Click);
             // 
+            // btnCriarConta
+            // 
+            this.btnCriarConta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCriarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCriarConta.FlatAppearance.BorderSize = 0;
+            this.btnCriarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
+            this.btnCriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCriarConta.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarConta.Location = new System.Drawing.Point(24, 52);
+            this.btnCriarConta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCriarConta.Name = "btnCriarConta";
+            this.btnCriarConta.Size = new System.Drawing.Size(163, 28);
+            this.btnCriarConta.TabIndex = 13;
+            this.btnCriarConta.Text = "Criar uma nova conta";
+            this.btnCriarConta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCriarConta.UseVisualStyleBackColor = true;
+            this.btnCriarConta.Click += new System.EventHandler(this.btnCriarConta_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 403);
+            this.Controls.Add(this.btnCriarConta);
             this.Controls.Add(this.btnEsqSenha);
             this.Controls.Add(this.btnSuporte);
             this.Controls.Add(this.btnEfetuarLogin);
@@ -215,5 +235,6 @@
         private System.Windows.Forms.Button btnEfetuarLogin;
         private System.Windows.Forms.Button btnSuporte;
         private System.Windows.Forms.Button btnEsqSenha;
+        private System.Windows.Forms.Button btnCriarConta;
     }
 }

@@ -14,16 +14,16 @@ namespace LDV_DESIGNE_BZ.Class
         {
             query.LimparParametros();
             string SQL = @"INSERT INTO LDVACCOUNTUSER
-                          (CPFUSER, NAMEUSER, PASSUSER, EMAILUSER, TELUSER, TIPOUSER, FIRSTNAME, LASTNAME)
+                          (CPFUSER, NAMEUSER, PASSUSER, EMAILUSER, TELUSER, FIRSTNAME, LASTNAME)
                           VALUES
-                          (@CPFUSER, @NAMEUSER, @PASSUSER, @EMAILUSER, @TELUSER, @TIPOUSER, @FIRSTNAME, @LASTNAME)";
+                          (@CPFUSER, @NAMEUSER, @PASSUSER, @EMAILUSER, @TELUSER, @FIRSTNAME, @LASTNAME)";
 
             query.AdicionarParametro("@CPFUSER", SqlDbType.VarChar, user.CPFuser);
             query.AdicionarParametro("@NAMEUSER", SqlDbType.VarChar, user.NameUser);
             query.AdicionarParametro("@PASSUSER", SqlDbType.VarChar, user.PassUser);
             query.AdicionarParametro("@EMAILUSER", SqlDbType.VarChar, user.EmailUser);
             query.AdicionarParametro("@TELUSER", SqlDbType.VarChar, user.TelUser);
-            query.AdicionarParametro("@TIPOUSER", SqlDbType.VarChar, user.TipoUser);
+            //query.AdicionarParametro("@TIPOUSER", SqlDbType.VarChar, user.TipoUser);
             query.AdicionarParametro("@FIRSTNAME", SqlDbType.VarChar, user.FirstName);
             query.AdicionarParametro("@LASTNAME", SqlDbType.VarChar, user.LastName);
 

@@ -32,5 +32,16 @@
             FirstName = firstName;
             LastName = lastName;
         }
+
+        public User(string cPFuser, string nameUser, string passUser, string emailUser, string telUser, string firstName, string lastName) : this(cPFuser, nameUser)
+        {
+            CPFuser = cPFuser;
+            NameUser = nameUser;
+            PassUser = passUser;
+            EmailUser = emailUser;
+            TelUser = telUser;
+            FirstName = firstName;
+            LastName = lastName;
+        }
     }
 }

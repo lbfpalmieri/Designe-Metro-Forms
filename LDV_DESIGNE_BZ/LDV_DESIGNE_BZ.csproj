@@ -86,6 +86,12 @@
     <Compile Include="Forms\frmConfigAccount.Designer.cs">
       <DependentUpon>frmConfigAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCriarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCriarConta.Designer.cs">
+      <DependentUpon>frmCriarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDebit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Forms\frmConfigAccount.resx">
       <DependentUpon>frmConfigAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCriarConta.resx">
+      <DependentUpon>frmCriarConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDebit.resx">
       <DependentUpon>frmDebit.cs</DependentUpon>
